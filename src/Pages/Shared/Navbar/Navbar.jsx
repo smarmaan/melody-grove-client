@@ -3,17 +3,25 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const navRouteOptions = (
     <>
-      <li>
-        <a>Home</a>
+      <li className="my-1">
+        <NavLink to="/" className="navbar_routes_style">
+          Home
+        </NavLink>
       </li>
-      <li>
-        <a>Instructors</a>
+      <li className="my-1">
+        <NavLink to="/" className="navbar_routes_style">
+          Instructors
+        </NavLink>
       </li>
-      <li>
-        <a>Classes</a>
+      <li className="my-1">
+        <NavLink to="/" className="navbar_routes_style">
+          Classes
+        </NavLink>
       </li>
-      <li>
-        <a>Dashboard</a>
+      <li className="my-1 ">
+        <NavLink to="/" className="navbar_routes_style">
+          Dashboard
+        </NavLink>
       </li>
     </>
   );

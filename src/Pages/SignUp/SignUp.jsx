@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <div className="">
+      <Helmet>
+        <title> Melody Grove | Sign Up </title>
+      </Helmet>
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] ">
         <div className="hero-overlay bg-opacity-30"></div>
 
