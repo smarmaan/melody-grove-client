@@ -1,0 +1,5 @@
+https://swiperjs.com/swiper-api#methods--properties
+
+ReactPlayer  ====  https://www.npmjs.com/package/react-player
+
+music-illustrations ===== https://www.drawkit.com/illustrations/music-illustrations
