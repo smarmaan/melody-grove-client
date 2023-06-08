@@ -1,19 +1,88 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const themes = ["light", "dark", "cupcake"];
-  const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
+  const themes = [
+    "light",
+    "dark",
+    "cupcake",
+    "bumblebee",
+    "emerald",
+    "corporate",
+    "synthwave",
+    "retro",
+    "cyberpunk",
+    "valentine",
+    "halloween",
+    "garden",
+    "forest",
+    "aqua",
+    "lofi",
+    "pastel",
+    "fantasy",
+    "wireframe",
+    "black",
+    "luxury",
+    "dracula",
+    "cmyk",
+    "autumn",
+    "business",
+    "acid",
+    "lemonade",
+    "night",
+    "coffee",
+    "winter",
+  ];
+  const themeNames = [
+    "light",
+    "dark",
+    "cupcake",
+    "bumblebee",
+    "emerald",
+    "corporate",
+    "synthwave",
+    "retro",
+    "cyberpunk",
+    "valentine",
+    "halloween",
+    "garden",
+    "forest",
+    "aqua",
+    "lofi",
+    "pastel",
+    "fantasy",
+    "wireframe",
+    "black",
+    "luxury",
+    "dracula",
+    "cmyk",
+    "autumn",
+    "business",
+    "acid",
+    "lemonade",
+    "night",
+    "coffee",
+    "winter",
+  ];
+  const [currentTheme, setCurrentTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme || "cupcake";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme);
+  }, [currentTheme]);
 
   const toggleTheme = () => {
-    setCurrentThemeIndex((prevIndex) => (prevIndex + 1) % themes.length);
-    const currentTheme = themes[currentThemeIndex];
-    document.documentElement.setAttribute("data-theme", currentTheme);
+    const themeIndex = themes.indexOf(currentTheme);
+    const nextThemeIndex = (themeIndex + 1) % themes.length;
+    setCurrentTheme(themes[nextThemeIndex]);
   };
 
-  const currentTheme = themes[currentThemeIndex];
-  const themeToggleBtnText =
-    currentTheme === "light" ? "Dark Mode" : "Light Mode";
+  const currentThemeIndex = themes.indexOf(currentTheme);
+  const themeToggleBtnText = themeNames[currentThemeIndex];
 
   const navRouteOptions = (
     <>
