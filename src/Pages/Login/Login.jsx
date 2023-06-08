@@ -7,19 +7,28 @@ const Login = () => {
       <Helmet>
         <title> Melody Grove | Login </title>
       </Helmet>
-      <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] ">
+      <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
         <div className="hero-overlay bg-opacity-30"></div>
 
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
+        <div className="hero-content flex-col md:flex-row-reverse">
+          <div className="text-center md:w-1/2  lg:text-left shadow-xl drop-shadow-xl p-10 rounded-2xl text-white">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
+
+            <Link to="/">
+              {" "}
+              <button className="btn glass text-white font-bold text-xl">
+                Home
+              </button>{" "}
+            </Link>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+
+
+          <div className="card   bg-[url('https://images.unsplash.com/photo-1630110330918-ced8a801add8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80')] bg-cover drop-shadow-2xl md:w-1/2 max-w-sm shadow-2xl">
             <div className="card-body">
               <div className="form-control">
                 <label className="label">

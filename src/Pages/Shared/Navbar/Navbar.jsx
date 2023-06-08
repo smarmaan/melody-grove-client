@@ -1,6 +1,20 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const themes = ["light", "dark", "cupcake"];
+  const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
+
+  const toggleTheme = () => {
+    setCurrentThemeIndex((prevIndex) => (prevIndex + 1) % themes.length);
+    const currentTheme = themes[currentThemeIndex];
+    document.documentElement.setAttribute("data-theme", currentTheme);
+  };
+
+  const currentTheme = themes[currentThemeIndex];
+  const themeToggleBtnText =
+    currentTheme === "light" ? "Dark Mode" : "Light Mode";
+
   const navRouteOptions = (
     <>
       <li className="my-1">
@@ -53,12 +67,16 @@ const Navbar = () => {
             {navRouteOptions}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl">Melody Grove</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navRouteOptions}</ul>
       </div>
       <div className="navbar-end">
+        <button className="btn" onClick={toggleTheme}>
+          {themeToggleBtnText}
+        </button>
+
         <NavLink to="/login" className="btn">
           Login
         </NavLink>
