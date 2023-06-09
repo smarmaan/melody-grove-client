@@ -27,8 +27,9 @@ const Login = () => {
             </Link>
           </div>
 
+          <div className="card   bg-[url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-cover drop-shadow-2xl md:w-1/2 max-w-sm shadow-2xl">
+            <div className="hero-overlay bg-opacity-10"></div>
 
-          <div className="card   bg-[url('https://images.unsplash.com/photo-1630110330918-ced8a801add8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80')] bg-cover drop-shadow-2xl md:w-1/2 max-w-sm shadow-2xl">
             <div className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -36,17 +37,17 @@ const Login = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="email"
+                  placeholder="Email"
                   className="input input-bordered"
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text ">Password</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                 />
                 <label className="label">

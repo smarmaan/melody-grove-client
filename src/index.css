@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .navbar_routes_style {
-  @apply lg:bg-transparent text-white hover:bg-inherit hover:text-black text-xl;
+  @apply lg:bg-transparent  hover:text-black md:text-xl;
 }

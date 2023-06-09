@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import { MdArrowDropDownCircle } from "react-icons/md";
 const Navbar = () => {
   const themes = ["light", "dark", "cupcake", "night"];
-  const themeNames = ["light", "dark", "cupcake", "night"];
   const [currentTheme, setCurrentTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme || "cupcake";
@@ -15,14 +14,9 @@ const Navbar = () => {
     localStorage.setItem("theme", currentTheme);
   }, [currentTheme]);
 
-  const toggleTheme = () => {
-    const themeIndex = themes.indexOf(currentTheme);
-    const nextThemeIndex = (themeIndex + 1) % themes.length;
-    setCurrentTheme(themes[nextThemeIndex]);
+  const changeTheme = (theme) => {
+    setCurrentTheme(theme);
   };
-
-  const currentThemeIndex = themes.indexOf(currentTheme);
-  const themeToggleBtnText = themeNames[currentThemeIndex];
 
   const navRouteOptions = (
     <>
@@ -76,15 +70,37 @@ const Navbar = () => {
             {navRouteOptions}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Melody Grove</a>
+        <a className="normal-case md:text-xl flex justify-center items-center gap-10">
+          <img
+            src="../../../../public/Gold Modern Music Logo.gif"
+            className="w-16 rounded-full"
+            alt=""
+          />
+          <h2 className="bg-white px-2 rounded-full py-1"> Melody Grove</h2>{" "}
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navRouteOptions}</ul>
       </div>
-      <div className="navbar-end">
-        <button className="btn" onClick={toggleTheme}>
-          {themeToggleBtnText}
-        </button>
+
+      <div className="navbar-end gap-10">
+        <div className="dropdown dropdown-bottom dropdown-end ">
+          <label
+            tabIndex={0}
+            className="cursor-pointer inline-flex items-center"
+          >
+            <button className="btn btn-xs">
+              <MdArrowDropDownCircle className="w-5" /> Theme
+            </button>
+          </label>
+          <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box mt-3">
+            {themes.map((theme) => (
+              <li key={theme} onClick={() => changeTheme(theme)}>
+                <button className="btn my-1 btn-sm px-16 w-10">{theme}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <NavLink to="/login" className="btn">
           Login
