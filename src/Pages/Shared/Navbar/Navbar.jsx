@@ -45,7 +45,7 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li className="my-1 ">
-        <NavLink to="/" className="navbar_routes_style">
+        <NavLink to="/dashboard" className="navbar_routes_style">
           Dashboard
         </NavLink>
       </li>
@@ -113,7 +113,14 @@ const Navbar = () => {
 
         {user ? (
           <>
-
+            <figure>
+              <img
+                className="avatar w-10 rounded-full mx-2"
+                src={user?.photoURL}
+                title={user?.displayName}
+                alt=""
+              />
+            </figure>
             <button onClick={handleLogout} className="btn">
               Logout
             </button>

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
@@ -23,6 +24,16 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+
+        Swal.fire({
+          title: "User Login Successful",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+        });
       })
       .catch((error) => console.error(error));
   };
