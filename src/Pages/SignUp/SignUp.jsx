@@ -23,7 +23,7 @@ const SignUp = () => {
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
         <div className="hero-overlay bg-opacity-30"></div>
 
-        <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10 mt-16">
+        <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10 mt-24 mb-5">
           <div className="text-center md:w-1/2 lg:text-left shadow-xl drop-shadow-xl  rounded-2xl text-white">
             <>
               <img
@@ -55,7 +55,7 @@ const SignUp = () => {
 
 
  */}
-          <div className="card bg-[url('https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?cs=srgb&dl=pexels-philip-boakye-3428498.jpg&fm=jpg')] bg-cover drop-shadow-2xl md:w-1/2 max-w-sm shadow-2xl">
+          <div className="card bg-[url('https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?cs=srgb&dl=pexels-philip-boakye-3428498.jpg&fm=jpg')] bg-cover drop-shadow-2xl max-w-sm shadow-2xl">
             <div className="hero-overlay bg-opacity-10"></div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -65,7 +65,7 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Type your name here"
                   name="name"
                   {...register("name", { required: true })}
                   className="input input-bordered"
@@ -89,7 +89,7 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Photo URL"
+                  placeholder="Give your photo URL"
                   {...register("photoURL", { required: true })}
                   className="input input-bordered"
                 />
@@ -113,7 +113,7 @@ const SignUp = () => {
                 <input
                   type="email"
                   {...register("email", { required: true })}
-                  placeholder="Type here"
+                  placeholder="Type your Email"
                   name="email"
                   className="input input-bordered"
                 />
@@ -179,16 +179,16 @@ const SignUp = () => {
                     <span className="label-text">Confirm Password</span>
                   </label>
                   <input
-                    type="text"
-                    {...register("password", {
+                    type="password"
+                    {...register("confirm", {
                       required: true,
                     })}
-                    placeholder="Password Again"
-                    name="password"
+                    placeholder="Type Again"
+                    name="confirm"
                     className="input input-bordered"
                   />
-                  {errors.password?.type === "required" && (
-                    <span className="text-red-600">Password is required</span>
+                  {errors.confirm?.type === "required" && (
+                    <span className="text-red-600">Password Must Match</span>
                   )}
                 </div>
               </div>
@@ -202,34 +202,51 @@ const SignUp = () => {
  */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                <div className="form-control">
+                <div className="form-control w-full ">
                   <label className="label">
                     <span className="label-text">Gender</span>
                   </label>
-                  <input
-                    type="email"
-                    {...register("email", { required: true })}
-                    placeholder="Gender"
-                    name="email"
-                    className="input input-bordered"
-                  />
-                  {errors.email && (
-                    <span className="text-red-600">Email is required</span>
+                  <select
+                    defaultValue="Pick One"
+                    {...register("gender", { required: true })}
+                    className="select select-bordered"
+                  >
+                    <option className="btn btn-primary" disabled>
+                      Pick One
+                    </option>
+                    <option className="btn btn-primary">Male</option>
+                    <option className="btn bg-[#f1c2aa]">Female</option>
+                    <option className="btn btn-primary">Children</option>
+                    <option className="btn bg-[#f1c2aa]">Others</option>
+                  </select>
+
+                  {errors.gender?.type === "required" && (
+                    <span className="text-red-600">
+                      {" "}
+                      Must Select your Gender
+                    </span>
                   )}
                 </div>
+
+                {/*        
+
+----------------------- Address Filed ------------------------ 
+
+*/}
+
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Contact Number</span>
                   </label>
                   <input
-                    type="email"
-                    {...register("email", { required: true })}
-                    placeholder="Enter Number"
+                    type="number"
+                    {...register("number", { required: true })}
+                    placeholder="Contact Number"
                     name="number"
                     className="input input-bordered"
                   />
-                  {errors.email && (
-                    <span className="text-red-600">Email is required</span>
+                  {errors.number && (
+                    <span className="text-red-600">Number is required</span>
                   )}
                 </div>
               </div>
@@ -239,22 +256,22 @@ const SignUp = () => {
 
 
 
-
-
+        ------------------------ Address Filed ------------------------
+ 
  */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Address</span>
                 </label>
                 <input
-                  type="email"
-                  {...register("email", { required: true })}
+                  type="text"
+                  {...register("address", { required: true })}
                   placeholder="Enter Address"
-                  name="number"
+                  name="address"
                   className="input input-bordered"
                 />
-                {errors.email && (
-                  <span className="text-red-600">Email is required</span>
+                {errors.address && (
+                  <span className="text-red-600">Address is required</span>
                 )}
               </div>
 
