@@ -23,7 +23,7 @@ const SignUp = () => {
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
         <div className="hero-overlay bg-opacity-30"></div>
 
-        <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10">
+        <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10 mt-16">
           <div className="text-center md:w-1/2 lg:text-left shadow-xl drop-shadow-xl  rounded-2xl text-white">
             <>
               <img
@@ -131,44 +131,130 @@ const SignUp = () => {
 
  */}
 
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Password</span>
+                  </label>
+                  <input
+                    type="text"
+                    {...register("password", {
+                      required: true,
+                      minLength: 6,
+                      maxLength: 20,
+                      pattern:
+                        /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                    })}
+                    placeholder="Enter password"
+                    name="password"
+                    className="input input-bordered"
+                  />
+
+                  {errors.password?.type === "required" && (
+                    <span className="text-red-600">Password is required</span>
+                  )}
+
+                  {errors.password?.type === "minLength" && (
+                    <span className="text-red-600">
+                      Password must be 6 characters long
+                    </span>
+                  )}
+
+                  {errors.password?.type === "maxLength" && (
+                    <span className="text-red-600">
+                      Password must be less than 20 characters long
+                    </span>
+                  )}
+
+                  {errors.password?.type === "pattern" && (
+                    <span className="text-red-600">
+                      Password must have one of uppercase, lowercase , number
+                      special character.
+                    </span>
+                  )}
+                </div>
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Confirm Password</span>
+                  </label>
+                  <input
+                    type="text"
+                    {...register("password", {
+                      required: true,
+                    })}
+                    placeholder="Password Again"
+                    name="password"
+                    className="input input-bordered"
+                  />
+                  {errors.password?.type === "required" && (
+                    <span className="text-red-600">Password is required</span>
+                  )}
+                </div>
+              </div>
+              {/* 
+
+
+
+
+
+
+ */}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Gender</span>
+                  </label>
+                  <input
+                    type="email"
+                    {...register("email", { required: true })}
+                    placeholder="Gender"
+                    name="email"
+                    className="input input-bordered"
+                  />
+                  {errors.email && (
+                    <span className="text-red-600">Email is required</span>
+                  )}
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Contact Number</span>
+                  </label>
+                  <input
+                    type="email"
+                    {...register("email", { required: true })}
+                    placeholder="Enter Number"
+                    name="number"
+                    className="input input-bordered"
+                  />
+                  {errors.email && (
+                    <span className="text-red-600">Email is required</span>
+                  )}
+                </div>
+              </div>
+
+              {/* 
+
+
+
+
+
+
+ */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Address</span>
                 </label>
                 <input
-                  type="text"
-                  {...register("password", {
-                    required: true,
-                    minLength: 6,
-                    maxLength: 20,
-                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
-                  })}
-                  placeholder="Enter your password"
-                  name="password"
+                  type="email"
+                  {...register("email", { required: true })}
+                  placeholder="Enter Address"
+                  name="number"
                   className="input input-bordered"
                 />
-
-                {errors.password?.type === "required" && (
-                  <span className="text-red-600">Password is required</span>
-                )}
-
-                {errors.password?.type === "minLength" && (
-                  <span className="text-red-600">
-                    Password must be 6 characters long
-                  </span>
-                )}
-
-                {errors.password?.type === "maxLength" && (
-                  <span className="text-red-600">
-                    Password must be less than 20 characters long
-                  </span>
-                )}
-
-                {errors.password?.type === "pattern" && (
-                  <span className="text-red-600">
-                    Password must have one of uppercase, lowercase , number
-                    special character.
-                  </span>
+                {errors.email && (
+                  <span className="text-red-600">Email is required</span>
                 )}
               </div>
 
@@ -212,7 +298,7 @@ const SignUp = () => {
               <small className="flex-row items-center justify-center">
                 Already have an account at Melody Grove?{" "}
                 <Link
-                  className="btn btn-primary btn-xs mt-5 w-24 mx-auto"
+                  className="btn btn-primary btn-xs w-24 mx-auto"
                   to="/login"
                 >
                   Login

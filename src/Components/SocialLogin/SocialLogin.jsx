@@ -1,9 +1,9 @@
 const SocialLogin = () => {
   return (
     <div>
-      <div className="divider "></div>
+      <div className="divider m-2"></div>
 
-      <div className="text-center mb-4">
+      <div className="text-center mb-2">
         <button className="btn btn-circle border-0">
           <img
             src="/public/google-logo-effect.gif"
