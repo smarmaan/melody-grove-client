@@ -88,7 +88,7 @@ const Navbar = () => {
           <h2 className="bg-white px-2 rounded-full py-1"> Melody Grove</h2>{" "}
         </a>
       </div>
-      <div className="navbar hidden lg:flex">
+      <div className="navbar justify-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navRouteOptions}</ul>
       </div>
 
@@ -115,7 +115,7 @@ const Navbar = () => {
           <>
             <figure>
               <img
-                className="avatar w-12 shadow-2xl drop-shadow-2xl rounded-full  z-15"
+                className="avatar w-12 shadow-2xl drop-shadow-2xl rounded-full  z-10"
                 src={user?.photoURL}
                 title={user?.displayName}
                 alt=""

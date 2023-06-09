@@ -60,7 +60,7 @@ const SignUp = () => {
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
         <div className="hero-overlay bg-opacity-30"></div>
 
-        <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10 mt-24 mb-5">
+        <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10 mt-12 mb-5">
           <div className="text-center md:w-1/2 lg:text-left shadow-xl drop-shadow-xl  rounded-2xl text-white">
             <>
               <img
@@ -73,11 +73,11 @@ const SignUp = () => {
                 <h1 className="text-4xl font-bold my-5">Sign Up!</h1>
                 <p className="pr-16">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ipsum, exercitationem obcaecati iusto voluptatem aliquam fuga
+                  Ipsum, exercitationem iusto voluptatem aliquam fuga
                 </p>
                 <Link to="/">
                   {" "}
-                  <button className="btn glass text-white font-bold md:text-xl my-5">
+                  <button className="btn glass text-white font-bold my-5">
                     Home
                   </button>{" "}
                 </Link>

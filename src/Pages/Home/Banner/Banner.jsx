@@ -21,6 +21,7 @@ const Banner = () => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         effect={"fade"}
         navigation={false}
@@ -32,16 +33,28 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img
+            src="https://i.ibb.co/mb7zHV1/1162901.jpg"
+            className="bg-cover"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img
+            src="https://i.ibb.co/VLSrXwL/musical-instruments-2x.png"
+            className="bg-cover"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img
+            src="https://i.ibb.co/7z8CHKx/mt-2022-101-4-48-f01.jpg"
+            className="bg-cover w-full"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <img
+            src="https://i.ibb.co/4ZNPZnr/kid-learning-guitar-carousel.jpg"
+            className="bg-cover"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
