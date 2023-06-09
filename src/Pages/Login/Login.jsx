@@ -2,11 +2,14 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
+
+  const { signIn } = useContext(AuthContext);
 
   const {
     register,
@@ -16,6 +19,8 @@ const Login = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
+
   };
 
   const togglePassword = () => {
