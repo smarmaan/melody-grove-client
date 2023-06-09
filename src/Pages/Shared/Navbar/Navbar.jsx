@@ -111,11 +111,11 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {user ? (
+        {user?.photoURL ? (
           <>
             <figure>
               <img
-                className="avatar w-10 rounded-full mx-2"
+                className="avatar w-12 shadow-2xl drop-shadow-2xl rounded-full  z-15"
                 src={user?.photoURL}
                 title={user?.displayName}
                 alt=""

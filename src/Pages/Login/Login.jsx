@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
@@ -9,8 +9,15 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
+  const [error, setError] = useState("");
 
   const { signIn } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const {
     register,
@@ -20,6 +27,9 @@ const Login = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
+    setError("");
+
     signIn(data.email, data.password)
       .then((result) => {
         const user = result.user;
@@ -34,8 +44,13 @@ const Login = () => {
             popup: "animate__animated animate__fadeOutUp",
           },
         });
+
+        navigate(from, { replace: true });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
   };
 
   const togglePassword = () => {
@@ -147,6 +162,14 @@ const Login = () => {
                 />
               </div>
             </form>
+
+            <div className="mb-5 mx-5 ">
+              {error && (
+                <div className="text-[#e7f707] text-center text-lg glass rounded-3xl p-2">
+                  {error}
+                </div>
+              )}
+            </div>
 
             <p className="text-center  md:text-xl">
               <small className="flex-row items-center justify-center">

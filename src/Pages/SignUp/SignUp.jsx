@@ -1,15 +1,17 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
-
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const [passwordType, setPasswordType] = useState("password");
+
+  const navigate = useNavigate();
 
   const togglePassword = () => {
     setPasswordType(passwordType === "password" ? "text" : "password");
@@ -28,7 +30,24 @@ const SignUp = () => {
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
       console.log(loggedUser);
-      reset();
+
+      updateUserProfile(data.name, data.photoURL)
+        .then(() => {
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "User created successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+
+          navigate("/");
+        })
+
+        .catch((error) => {
+          console.error(error);
+        });
     });
   };
 
