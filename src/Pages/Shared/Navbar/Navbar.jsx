@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdArrowDropDownCircle } from "react-icons/md";
+import { AuthContext } from "../../../Providers/AuthProvider";
 const Navbar = () => {
+  const { user, LogOut } = useContext(AuthContext);
+
   const themes = ["light", "dark", "cupcake", "night"];
   const [currentTheme, setCurrentTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -16,6 +19,12 @@ const Navbar = () => {
 
   const changeTheme = (theme) => {
     setCurrentTheme(theme);
+  };
+
+  const handleLogout = () => {
+    LogOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
   };
 
   const navRouteOptions = (
@@ -79,7 +88,7 @@ const Navbar = () => {
           <h2 className="bg-white px-2 rounded-full py-1"> Melody Grove</h2>{" "}
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navRouteOptions}</ul>
       </div>
 
@@ -102,9 +111,20 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <NavLink to="/login" className="btn">
-          Login
-        </NavLink>
+        {user ? (
+          <>
+
+            <button onClick={handleLogout} className="btn">
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <NavLink to="/login" className="btn">
+              Login
+            </NavLink>
+          </>
+        )}
       </div>
     </div>
   );
