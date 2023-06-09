@@ -2,8 +2,16 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
+  const [passwordType, setPasswordType] = useState("password");
+
+  const togglePassword = () => {
+    setPasswordType(passwordType === "password" ? "text" : "password");
+  };
+
   const {
     register,
     handleSubmit,
@@ -137,7 +145,7 @@ const SignUp = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                    type={passwordType}
                     {...register("password", {
                       required: true,
                       minLength: 6,
@@ -179,7 +187,7 @@ const SignUp = () => {
                     <span className="label-text">Confirm Password</span>
                   </label>
                   <input
-                    type="password"
+                    type={passwordType}
                     {...register("confirm", {
                       required: true,
                     })}
@@ -192,6 +200,21 @@ const SignUp = () => {
                   )}
                 </div>
               </div>
+
+              <div className="my-2 mx-auto" onClick={togglePassword}>
+                {passwordType === "password" ? (
+                  <div className="cursor-pointer bg-primary rounded-full px-1 flex items-center gap-1">
+                    <FaEye></FaEye>
+                    Show Password
+                  </div>
+                ) : (
+                  <div className="cursor-pointer bg-primary rounded-full px-2  flex items-center gap-1">
+                    <FaEyeSlash />
+                    Hide Password
+                  </div>
+                )}
+              </div>
+
               {/* 
 
 

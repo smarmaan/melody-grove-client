@@ -1,16 +1,25 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const [passwordType, setPasswordType] = useState("password");
 
-    const form = e.target;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    const email = form.email.value;
-    const password = form.password.value;
-    console.log(email, password);
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const togglePassword = () => {
+    setPasswordType(passwordType === "password" ? "text" : "password");
   };
 
   return (
@@ -50,30 +59,60 @@ const Login = () => {
           <div className="card   bg-[url('https://i.ibb.co/QNJMZCY/photo-1571330735066-03aaa9429d89-ixlib-rb-4-0.jpg')] bg-cover drop-shadow-2xl md:w-1/2 max-w-sm shadow-2xl">
             <div className="hero-overlay bg-opacity-10"></div>
 
-            <form onSubmit={handleLogin} className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
                   type="email"
-                  placeholder="Enter your Email"
+                  {...register("email", { required: true })}
+                  placeholder="Type your Email"
                   name="email"
                   className="input input-bordered"
-                  required
                 />
+                {errors.email && (
+                  <span className="text-red-600">Email is required</span>
+                )}
               </div>
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="text"
-                  placeholder="Enter your Password"
+                  type={passwordType}
+                  {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 20,
+                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                  })}
+                  placeholder="Enter password"
                   name="password"
                   className="input input-bordered"
-                  required
                 />
+                <div className="flex justify-between">
+                  {errors.password?.type === "required" && (
+                    <span className="text-red-600 my-2">
+                      Password is required
+                    </span>
+                  )}
+
+                  <div className="my-2" onClick={togglePassword}>
+                    {passwordType === "password" ? (
+                      <div className="cursor-pointer bg-primary rounded-full px-2 flex items-center gap-1">
+                        <FaEye></FaEye>
+                        Show Password
+                      </div>
+                    ) : (
+                      <div className="cursor-pointer bg-primary rounded-full px-2  flex items-center gap-1">
+                        <FaEyeSlash />
+                        Hide Password
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
               {/* 
 
