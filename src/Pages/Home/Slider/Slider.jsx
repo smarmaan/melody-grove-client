@@ -33,7 +33,7 @@ const Slider = () => {
     <div className="wrapper my-24">
       <div className="scene">
         <div className="carousel keen-slider" ref={sliderRef}>
-          <div className="rounded-3xl  drop-shadow-xl carousel__cell">
+          <div className="carousel__cell">
             <img
               src="https://i.ibb.co/Drb0ddQ/Guitar.jpg"
               className="rounded-2xl  w-36 h-36   md:w-44 md:h-60 drop-shadow-xl"

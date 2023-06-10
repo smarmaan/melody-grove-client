@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Guitar",
+    "description": "A versatile and popular instrument that can be played in various genres.",
+    "image": "https://i.ibb.co/Drb0ddQ/Guitar.jpg"
+  },
+  {
+    "name": "Piano",
+    "description": "A foundational instrument that can help develop musical skills and understanding.",
+    "image": "https://store-images.microsoft.com/image/apps.30166.9007199266245084.fb7caf91-3ac4-43c5-9c95-dfb7ced498ad.5ea0dffb-358b-4ee8-b9a3-aeb107795769"
+  },
+  {
+    "name": "Violin",
+    "description": "A beautiful string instrument that requires dedication and practice to master.",
+    "image": "https://i.ibb.co/6DNLC1v/Violin.jpg"
+  },
+  {
+    "name": "Drums",
+    "description": "Learn the rhythms and beats that drive the music.",
+    "image": "https://drumeoblog.s3.amazonaws.com/beat/wp-content/uploads/2020/10/21081025/record-drums-e1603293072185.jpg"
+  },
+  {
+    "name": "Flute",
+    "description": "Explore melodies and create enchanting tunes with this wind instrument.",
+    "image": "https://musiclessonsacademy.com.au/wp-content/uploads/2022/09/buy-starter-flute-kit-australia.jpg"
+  },
+  {
+    "name": "Trumpet",
+    "description": "Master the brass instrument and create vibrant sounds.",
+    "image": "https://thevault.musicarts.com/wp-content/uploads/2016/01/trumpet1-scaled.jpg"
+  },
+  {
+    "name": "Ukulele",
+    "description": "A smaller and easier-to-learn string instrument that's great for beginners.",
+    "image": "https://i.cbc.ca/1.5950590.1615837015!/fileImage/httpImage/alegra-powers-with-her-ukulele.jpg"
+  },
+  {
+    "name": "Saxophone",
+    "description": "Discover the world of jazz and other genres with this expressive woodwind instrument.",
+    "image": "https://my.brevardmusic.org/images/admin/4da1799b67b0d03e97402e2fe8174e9d.jpg"
+  },
+  {
+    "name": "Cello",
+    "description": "Dive into the rich tones of this majestic string instrument.",
+    "image": "https://cdn.shopify.com/s/files/1/0014/2521/1486/products/Concerto-Cello.png?v=1650545211"
+  },
+  {
+    "name": "Clarinet",
+    "description": "Learn to play this versatile woodwind instrument that can be used in classical and jazz music.",
+    "image": "https://virtualpiano.net/wp-content/uploads/2021/12/Online-Clarinet-Virtual-Piano.jpg"
+  },
+  {
+    "name": "Djembe",
+    "description": "Experience the joy of playing traditional African rhythms on this hand drum.",
+    "image": "https://brixtonhouse.co.uk/wp-content/uploads/2022/03/Djembe-Drum-playing-1-1024x576.jpg"
+  },
+  {
+    "name": "Xylophone",
+    "description": "Learn to play melodies and harmonies on this percussive instrument.",
+    "image": "https://www.cmuse.org/wp-content/uploads/2020/06/learn-xylophone-lessons-online.jpg"
+  }
+]

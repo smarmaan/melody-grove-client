@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import Slider from "../Slider/Slider";
+import InstrumentsCategory from "../InstrumentsCategory/InstrumentsCategory";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       </Helmet>
       <Banner />
       <Slider></Slider>
+      <InstrumentsCategory></InstrumentsCategory>
     </div>
   );
 };
