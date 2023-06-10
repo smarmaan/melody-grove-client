@@ -11,7 +11,7 @@ const PopularInstructors = () => {
   };
 
   useEffect(() => {
-    let url = "http://localhost:5000/all-instructors";
+    let url = "http://localhost:5000/popular-instructors";
     if (showAll) {
       url += "?showAll=true";
     }
@@ -28,7 +28,7 @@ const PopularInstructors = () => {
   return (
     <div className="my-24">
       <Title
-        heading={"Popular Instruments Classes we provide"}
+        heading={"Popular Instructors we have"}
         subheading={
           "Explore the Most Popular Musical Instruments and Join the Summer Camp"
         }
