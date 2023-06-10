@@ -11,7 +11,7 @@ const InstrumentsCategory = () => {
   const [instrumentsCategory, setInstrumentsCategory] = useState([]);
 
   useEffect(() => {
-    fetch("/public/silder.json")
+    fetch("http://localhost:5000/popular-courses")
       .then((res) => res.json())
       .then((data) => setInstrumentsCategory(data));
   }, []);

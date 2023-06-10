@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import Title from "../../../Components/Title/Title";
 import { useState } from "react";
+import PopularClassCard from "./PopularClassCard";
 
 const PopularClasses = () => {
   const [popular, setPopular] = useState([]);
   useEffect(() => {
-    fetch("/public/silder.json")
+    fetch("http://localhost:5000/popular-courses")
       .then((res) => res.json())
       .then((data) => {
         setPopular(data);
@@ -22,7 +23,11 @@ const PopularClasses = () => {
         }
       ></Title>
 
-      <div className=""></div>
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 justify-center items-center font-Cambria text-base">
+        {popular.map((info) => (
+          <PopularClassCard key={info._id} info={info}></PopularClassCard>
+        ))}
+      </div>
     </div>
   );
 };
