@@ -4,7 +4,8 @@
     "description": "A versatile and popular instrument that can be played in various genres.",
     "image": "https://i.ibb.co/Drb0ddQ/Guitar.jpg",
     "students": 45,
-    "activities": ["Jam sessions", "Songwriting workshop", "Guitar ensemble"]
+    "activities": ["Jam sessions", "Songwriting workshop", "Guitar ensemble"],
+    "rating": 4.5
   },
   {
     "name": "Piano",
@@ -15,7 +16,8 @@
       "Classical piano recital",
       "Music theory sessions",
       "Piano duet performances"
-    ]
+    ],
+    "rating": 4.8
   },
   {
     "name": "Violin",
@@ -26,7 +28,8 @@
       "Violin ensemble",
       "Masterclasses with guest violinists",
       "Chamber music sessions"
-    ]
+    ],
+    "rating": 4.3
   },
   {
     "name": "Drums",
@@ -37,7 +40,8 @@
       "Drum circle sessions",
       "Groove and rhythm workshops",
       "Drum solo performances"
-    ]
+    ],
+    "rating": 4.6
   },
   {
     "name": "Flute",
@@ -48,7 +52,8 @@
       "Flute choir rehearsals",
       "Breath control exercises",
       "Flute technique workshops"
-    ]
+    ],
+    "rating": 4.2
   },
   {
     "name": "Trumpet",
@@ -59,7 +64,8 @@
       "Trumpet ensemble",
       "Brass section masterclasses",
       "Improvisation sessions"
-    ]
+    ],
+    "rating": 4.4
   },
   {
     "name": "Ukulele",
@@ -70,7 +76,8 @@
       "Ukulele strumming circle",
       "Chord progression workshops",
       "Folk and pop ukulele songs"
-    ]
+    ],
+    "rating": 4.7
   },
   {
     "name": "Saxophone",
@@ -81,7 +88,8 @@
       "Saxophone quartet rehearsals",
       "Jazz improvisation workshops",
       "Saxophone solo performances"
-    ]
+    ],
+    "rating": 4.1
   },
   {
     "name": "Cello",
@@ -92,7 +100,8 @@
       "Cello ensemble",
       "Bow technique masterclasses",
       "Chamber music collaborations"
-    ]
+    ],
+    "rating": 4.0
   },
   {
     "name": "Clarinet",
@@ -103,7 +112,8 @@
       "Clarinet choir rehearsals",
       "Clarinet technique workshops",
       "Solo repertoire performances"
-    ]
+    ],
+    "rating": 4.2
   },
   {
     "name": "Djembe",
@@ -114,7 +124,8 @@
       "African drumming workshops",
       "Rhythm circle sessions",
       "Djembe solo performances"
-    ]
+    ],
+    "rating": 4.4
   },
   {
     "name": "Xylophone",
@@ -125,6 +136,7 @@
       "Xylophone ensemble",
       "Mallet technique workshops",
       "Melodic percussion compositions"
-    ]
+    ],
+    "rating": 4.3
   }
 ]
