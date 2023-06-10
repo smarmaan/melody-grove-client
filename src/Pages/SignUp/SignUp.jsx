@@ -57,7 +57,7 @@ const SignUp = () => {
         <title> Melody Grove | Sign Up </title>
       </Helmet>
 
-      <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
+      <div className="hero font-Cambria min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
         <div className="hero-overlay bg-opacity-30"></div>
 
         <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10 mt-12 mb-5">
@@ -92,7 +92,7 @@ const SignUp = () => {
 
 
  */}
-          <div className="card bg-[url('https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?cs=srgb&dl=pexels-philip-boakye-3428498.jpg&fm=jpg')] bg-cover drop-shadow-2xl max-w-sm shadow-2xl">
+          <div className="card bg-[url('https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?cs=srgb&dl=pexels-philip-boakye-3428498.jpg&fm=jpg')] bg-cover drop-shadow-2xl max-w-m shadow-2xl my-10">
             <div className="hero-overlay bg-opacity-10"></div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">

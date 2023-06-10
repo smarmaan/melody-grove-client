@@ -9,7 +9,7 @@ const InstructorCard = ({ info }) => {
       <div className="card-body  bg-[url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover rounded-es-xl rounded-ee-xl">
         <h2 className="card-title md:text-3xl">{name}</h2>
         <h2 className="card-title">Age: {age}</h2>
-        <h2 className="card-title md:text-lg">Email: {email}</h2>
+        <h2 className="card-title md:text-lg">Email:{email}</h2>
         <p>Number of Students : {students}</p>
         <p>Rating : {rating}</p>
         <p>{details}</p>
