@@ -1,9 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Title from "../../../Components/Title/Title";
-import { useState } from "react";
-import PopularClassCard from "./PopularClassCard";
+import PopularInstructorCard from "./PopularInstructorCard";
 
-const PopularClasses = () => {
+const PopularInstructors = () => {
   const [popular, setPopular] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
@@ -12,7 +11,7 @@ const PopularClasses = () => {
   };
 
   useEffect(() => {
-    let url = "http://localhost:5000/all-courses";
+    let url = "http://localhost:5000/all-instructors";
     if (showAll) {
       url += "?showAll=true";
     }
@@ -25,6 +24,7 @@ const PopularClasses = () => {
   }, [showAll]);
 
   console.log(popular);
+
   return (
     <div className="my-24">
       <Title
@@ -36,7 +36,10 @@ const PopularClasses = () => {
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 justify-center items-center font-Cambria text-base">
         {popular.map((info) => (
-          <PopularClassCard key={info._id} info={info}></PopularClassCard>
+          <PopularInstructorCard
+            key={info._id}
+            info={info}
+          ></PopularInstructorCard>
         ))}
       </div>
 
@@ -50,4 +53,4 @@ const PopularClasses = () => {
   );
 };
 
-export default PopularClasses;
+export default PopularInstructors;

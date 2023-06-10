@@ -1,182 +1,193 @@
 [
-  {
-    "name": "John Smith",
-    "age": 35,
-    "email": "john.smith@example.com",
-    "students": 30,
-    "rating": 4.9,
-    "classes": [
-      {
-        "name": "Guitar",
-        "numClasses": 10
-      },
-      {
-        "name": "Piano",
-        "numClasses": 12
-      }
-    ],
-    "image": "https://example.com/john_smith.jpg"
-  },
-  {
-    "name": "Emily Johnson",
-    "age": 32,
-    "email": "emily.johnson@example.com",
-    "students": 25,
-    "rating": 4.8,
-    "classes": [
-      {
-        "name": "Violin",
-        "numClasses": 8
-      },
-      {
-        "name": "Flute",
-        "numClasses": 6
-      }
-    ],
-    "image": "https://example.com/emily_johnson.jpg"
-  },
-  {
-    "name": "Michael Davis",
-    "age": 40,
-    "email": "michael.davis@example.com",
-    "students": 20,
-    "rating": 4.7,
-    "classes": [
-      {
-        "name": "Drums",
-        "numClasses": 9
-      },
-      {
-        "name": "Guitar",
-        "numClasses": 6
-      }
-    ],
-    "image": "https://example.com/michael_davis.jpg"
-  },
-  {
-    "name": "Sophia Clark",
-    "age": 28,
-    "email": "sophia.clark@example.com",
-    "students": 18,
-    "rating": 4.6,
-    "classes": [
-      {
-        "name": "Flute",
-        "numClasses": 10
-      },
-      {
-        "name": "Saxophone",
-        "numClasses": 8
-      }
-    ],
-    "image": "https://example.com/sophia_clark.jpg"
-  },
-  {
-    "name": "Daniel Thompson",
-    "age": 33,
-    "email": "daniel.thompson@example.com",
-    "students": 15,
-    "rating": 4.5,
-    "classes": [
-      {
-        "name": "Trumpet",
-        "numClasses": 7
-      },
-      {
-        "name": "Ukulele",
-        "numClasses": 5
-      }
-    ],
-    "image": "https://example.com/daniel_thompson.jpg"
-  },
-  {
-    "name": "Olivia Lee",
-    "age": 29,
-    "email": "olivia.lee@example.com",
-    "students": 12,
-    "rating": 4.4,
-    "classes": [
-      {
-        "name": "Saxophone",
-        "numClasses": 6
-      },
-      {
-        "name": "Piano",
-        "numClasses": 4
-      }
-    ],
-    "image": "https://example.com/olivia_lee.jpg"
-  },
-  {
-    "name": "Matthew Brown",
-    "age": 38,
-    "email": "matthew.brown@example.com",
-    "students": 10,
-    "rating": 4.3,
-    "classes": [
-      {
-        "name": "Cello",
-        "numClasses": 5
-      },
-      {
-        "name": "Guitar",
-        "numClasses": 3
-      }
-    ],
-    "image": "https://example.com/matthew_brown.jpg"
-  },
-  {
-    "name": "Emma Wilson",
-    "age": 31,
-    "email": "emma.wilson@example.com",
-    "students": 8,
-    "rating": 4.2,
-    "classes": [
-      {
-        "name": "Clarinet",
-        "numClasses": 4
-      },
-      {
-        "name": "Drums",
-        "numClasses": 3
-      }
-    ],
-    "image": "https://example.com/emma_wilson.jpg"
-  },
-  {
-    "name": "Jacob Martinez",
-    "age": 27,
-    "email": "jacob.martinez@example.com",
-    "students": 6,
-    "rating": 4.1,
-    "classes": [
-      {
-        "name": "Djembe",
-        "numClasses": 4
-      },
-      {
-        "name": "Guitar",
-        "numClasses": 2
-      }
-    ],
-    "image": "https://example.com/jacob_martinez.jpg"
-  },
-  {
-    "name": "Ava Johnson",
-    "age": 30,
-    "email": "ava.johnson@example.com",
-    "students": 5,
-    "rating": 4.0,
-    "classes": [
-      {
-        "name": "Xylophone",
-        "numClasses": 3
-      },
-      {
-        "name": "Violin",
-        "numClasses": 2
-      }
-    ],
-    "image": "https://example.com/ava_johnson.jpg"
-  }
-]
+    {
+      "name": "John Smith",
+      "age": 35,
+      "email": "john.smith@example.com",
+      "students": 30,
+      "rating": 4.9,
+      "classes": [
+        {
+          "name": "Guitar",
+          "numClasses": 10
+        },
+        {
+          "name": "Piano",
+          "numClasses": 12
+        }
+      ],
+      "image": "https://rootmusic.org.uk/wp-content/uploads/2018/02/JohnSmithBio2.jpg",
+      "details": "Experienced musician teaching guitar and piano with a passion for inspiring students."
+    },
+    {
+      "name": "Emily Johnson",
+      "age": 32,
+      "email": "emily.johnson@example.com",
+      "students": 25,
+      "rating": 4.8,
+      "classes": [
+        {
+          "name": "Violin",
+          "numClasses": 8
+        },
+        {
+          "name": "Flute",
+          "numClasses": 6
+        }
+      ],
+      "image": "https://www.violinist.com/art/blog/29621.jpg",
+      "details": "Dedicated teacher fostering a love for violin and flute through personalized instruction."
+    },
+    {
+      "name": "Michael Davis",
+      "age": 40,
+      "email": "michael.davis@example.com",
+      "students": 20,
+      "rating": 4.7,
+      "classes": [
+        {
+          "name": "Drums",
+          "numClasses": 9
+        },
+        {
+          "name": "Guitar",
+          "numClasses": 6
+        }
+      ],
+      "image": "https://i.ibb.co/j4S12mV/1631779001878.jpg",
+      "details": "Versatile musician providing dynamic drum and guitar lessons with a focus on technique."
+    },
+    {
+      "name": "Sophia Clark",
+      "age": 28,
+      "email": "sophia.clark@example.com",
+      "students": 18,
+      "rating": 4.6,
+      "classes": [
+        {
+          "name": "Flute",
+          "numClasses": 10
+        },
+        {
+          "name": "Saxophone",
+          "numClasses": 8
+        }
+      ],
+      "image": "https://www.ztunesmusic.com/uploads/3/0/4/5/3045010/karen-3_orig.jpg",
+      "details": "Accomplished flutist and saxophonist offering creative and engaging lessons for aspiring musicians."
+    },
+    {
+      "name": "Daniel Thompson",
+      "age": 33,
+      "email": "daniel.thompson@example.com",
+      "students": 15,
+      "rating": 4.5,
+      "classes": [
+        {
+          "name": "Trumpet",
+          "numClasses": 7
+        },
+        {
+          "name": "Ukulele",
+          "numClasses": 5
+        }
+      ],
+      "image": "https://i.ibb.co/5TcCsF5/download.jpg",
+      "details": "Energetic instructor specializing in trumpet and ukulele, guiding students towards musical excellence."
+    },
+    {
+      "name": "Olivia Lee",
+      "age": 29,
+      "email": "olivia.lee@example.com",
+      "students": 12,
+      "rating": 4.4,
+      "classes": [
+        {
+          "name": "Saxophone",
+          "numClasses": 6
+        },
+        {
+          "name": "Piano",
+          "numClasses": 4
+        }
+      ],
+      "image": "https://i.ibb.co/Sc2Br84/Yoon-Lee.jpg",
+      "details": "Skilled saxophonist and pianist nurturing students' musical growth through expressive teaching."
+    },
+    {
+      "name": "Matthew Brown",
+      "age": 38,
+      "email": "matthew.brown@example.com",
+      "students": 10,
+      "rating": 4.3,
+      "classes": [
+        {
+          "name": "Cello",
+          "numClasses": 5
+        },
+        {
+          "name": "Guitar",
+          "numClasses": 3
+        }
+      ],
+      "image": "https://i1.sndcdn.com/artworks-000525922104-56xja4-t500x500.jpg",
+      "details": "Patient instructor fostering a deep understanding of cello and guitar for aspiring musicians."
+    },
+    {
+      "name": "Emma Wilson",
+      "age": 31,
+      "email": "emma.wilson@example.com",
+      "students": 8,
+      "rating": 4.2,
+      "classes": [
+        {
+          "name": "Clarinet",
+          "numClasses": 4
+        },
+        {
+          "name": "Drums",
+          "numClasses": 3
+        }
+      ],
+      "image": "https://meettheartistsite.files.wordpress.com/2017/01/ej233.jpg",
+      "details": "Passionate teacher providing comprehensive clarinet and drums instruction with a focus on rhythm."
+    },
+    {
+      "name": "Jacob Martinez",
+      "age": 27,
+      "email": "jacob.martinez@example.com",
+      "students": 6,
+      "rating": 4.1,
+      "classes": [
+        {
+          "name": "Djembe",
+          "numClasses": 4
+        },
+        {
+          "name": "Guitar",
+          "numClasses": 2
+        }
+      ],
+      "image": "https://i.ibb.co/5sF5mr8/image.png",
+      "details": "Talented musician teaching djembe and guitar, incorporating diverse rhythms and techniques."
+    },
+    {
+      "name": "Ava Johnson",
+      "age": 30,
+      "email": "ava.johnson@example.com",
+      "students": 5,
+      "rating": 4.0,
+      "classes": [
+        {
+          "name": "Xylophone",
+          "numClasses": 3
+        },
+        {
+          "name": "Violin",
+          "numClasses": 2
+        }
+      ],
+      "image": "https://i.ibb.co/nm9bb7B/Anna-Black-1-15.jpg",
+      "details": "Vibrant instructor igniting a passion for xylophone and violin with a creative teaching approach."
+    }
+  ]
+  
