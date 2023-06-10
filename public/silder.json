@@ -2,61 +2,129 @@
   {
     "name": "Guitar",
     "description": "A versatile and popular instrument that can be played in various genres.",
-    "image": "https://i.ibb.co/Drb0ddQ/Guitar.jpg"
+    "image": "https://i.ibb.co/Drb0ddQ/Guitar.jpg",
+    "students": 45,
+    "activities": ["Jam sessions", "Songwriting workshop", "Guitar ensemble"]
   },
   {
     "name": "Piano",
     "description": "A foundational instrument that can help develop musical skills and understanding.",
-    "image": "https://store-images.microsoft.com/image/apps.30166.9007199266245084.fb7caf91-3ac4-43c5-9c95-dfb7ced498ad.5ea0dffb-358b-4ee8-b9a3-aeb107795769"
+    "image": "https://store-images.microsoft.com/image/apps.30166.9007199266245084.fb7caf91-3ac4-43c5-9c95-dfb7ced498ad.5ea0dffb-358b-4ee8-b9a3-aeb107795769",
+    "students": 60,
+    "activities": [
+      "Classical piano recital",
+      "Music theory sessions",
+      "Piano duet performances"
+    ]
   },
   {
     "name": "Violin",
     "description": "A beautiful string instrument that requires dedication and practice to master.",
-    "image": "https://i.ibb.co/6DNLC1v/Violin.jpg"
+    "image": "https://i.ibb.co/6DNLC1v/Violin.jpg",
+    "students": 25,
+    "activities": [
+      "Violin ensemble",
+      "Masterclasses with guest violinists",
+      "Chamber music sessions"
+    ]
   },
   {
     "name": "Drums",
     "description": "Learn the rhythms and beats that drive the music.",
-    "image": "https://drumeoblog.s3.amazonaws.com/beat/wp-content/uploads/2020/10/21081025/record-drums-e1603293072185.jpg"
+    "image": "https://drumeoblog.s3.amazonaws.com/beat/wp-content/uploads/2020/10/21081025/record-drums-e1603293072185.jpg",
+    "students": 35,
+    "activities": [
+      "Drum circle sessions",
+      "Groove and rhythm workshops",
+      "Drum solo performances"
+    ]
   },
   {
     "name": "Flute",
     "description": "Explore melodies and create enchanting tunes with this wind instrument.",
-    "image": "https://musiclessonsacademy.com.au/wp-content/uploads/2022/09/buy-starter-flute-kit-australia.jpg"
+    "image": "https://musiclessonsacademy.com.au/wp-content/uploads/2022/09/buy-starter-flute-kit-australia.jpg",
+    "students": 20,
+    "activities": [
+      "Flute choir rehearsals",
+      "Breath control exercises",
+      "Flute technique workshops"
+    ]
   },
   {
     "name": "Trumpet",
     "description": "Master the brass instrument and create vibrant sounds.",
-    "image": "https://thevault.musicarts.com/wp-content/uploads/2016/01/trumpet1-scaled.jpg"
+    "image": "https://thevault.musicarts.com/wp-content/uploads/2016/01/trumpet1-scaled.jpg",
+    "students": 30,
+    "activities": [
+      "Trumpet ensemble",
+      "Brass section masterclasses",
+      "Improvisation sessions"
+    ]
   },
   {
     "name": "Ukulele",
     "description": "A smaller and easier-to-learn string instrument that's great for beginners.",
-    "image": "https://i.cbc.ca/1.5950590.1615837015!/fileImage/httpImage/alegra-powers-with-her-ukulele.jpg"
+    "image": "https://i.cbc.ca/1.5950590.1615837015!/fileImage/httpImage/alegra-powers-with-her-ukulele.jpg",
+    "students": 55,
+    "activities": [
+      "Ukulele strumming circle",
+      "Chord progression workshops",
+      "Folk and pop ukulele songs"
+    ]
   },
   {
     "name": "Saxophone",
     "description": "Discover the world of jazz and other genres with this expressive woodwind instrument.",
-    "image": "https://my.brevardmusic.org/images/admin/4da1799b67b0d03e97402e2fe8174e9d.jpg"
+    "image": "https://my.brevardmusic.org/images/admin/4da1799b67b0d03e97402e2fe8174e9d.jpg",
+    "students": 15,
+    "activities": [
+      "Saxophone quartet rehearsals",
+      "Jazz improvisation workshops",
+      "Saxophone solo performances"
+    ]
   },
   {
     "name": "Cello",
     "description": "Dive into the rich tones of this majestic string instrument.",
-    "image": "https://cdn.shopify.com/s/files/1/0014/2521/1486/products/Concerto-Cello.png?v=1650545211"
+    "image": "https://cdn.shopify.com/s/files/1/0014/2521/1486/products/Concerto-Cello.png?v=1650545211",
+    "students": 10,
+    "activities": [
+      "Cello ensemble",
+      "Bow technique masterclasses",
+      "Chamber music collaborations"
+    ]
   },
   {
     "name": "Clarinet",
     "description": "Learn to play this versatile woodwind instrument that can be used in classical and jazz music.",
-    "image": "https://virtualpiano.net/wp-content/uploads/2021/12/Online-Clarinet-Virtual-Piano.jpg"
+    "image": "https://virtualpiano.net/wp-content/uploads/2021/12/Online-Clarinet-Virtual-Piano.jpg",
+    "students": 5,
+    "activities": [
+      "Clarinet choir rehearsals",
+      "Clarinet technique workshops",
+      "Solo repertoire performances"
+    ]
   },
   {
     "name": "Djembe",
     "description": "Experience the joy of playing traditional African rhythms on this hand drum.",
-    "image": "https://brixtonhouse.co.uk/wp-content/uploads/2022/03/Djembe-Drum-playing-1-1024x576.jpg"
+    "image": "https://brixtonhouse.co.uk/wp-content/uploads/2022/03/Djembe-Drum-playing-1-1024x576.jpg",
+    "students": 8,
+    "activities": [
+      "African drumming workshops",
+      "Rhythm circle sessions",
+      "Djembe solo performances"
+    ]
   },
   {
     "name": "Xylophone",
     "description": "Learn to play melodies and harmonies on this percussive instrument.",
-    "image": "https://www.cmuse.org/wp-content/uploads/2020/06/learn-xylophone-lessons-online.jpg"
+    "image": "https://www.cmuse.org/wp-content/uploads/2020/06/learn-xylophone-lessons-online.jpg",
+    "students": 12,
+    "activities": [
+      "Xylophone ensemble",
+      "Mallet technique workshops",
+      "Melodic percussion compositions"
+    ]
   }
 ]

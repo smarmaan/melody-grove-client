@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      Cambria: ["Cambria", "Sans-serif"],
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {

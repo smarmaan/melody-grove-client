@@ -5,6 +5,7 @@ import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./instrumentsCategory.css";
+import Title from "../../../Components/Title/Title";
 
 const InstrumentsCategory = () => {
   const [instrumentsCategory, setInstrumentsCategory] = useState([]);
@@ -16,10 +17,13 @@ const InstrumentsCategory = () => {
   }, []);
 
   //   console.log(instrumentsCategory);
-
   return (
-    <>
-      {" "}
+    <div className="">
+      <Title
+        heading={"Unleash Your Musical Potential"}
+        subheading={"Ignite Your Passion for Music"}
+      ></Title>
+
       <section className="my-24">
         <Swiper
           slidesPerView={4}
@@ -35,7 +39,7 @@ const InstrumentsCategory = () => {
           {instrumentsCategory.map((instrument, index) => (
             <SwiperSlide
               key={index}
-              className="flex-col gap-8 py-24 overflow-hidden relative"
+              className="flex-col gap-8 overflow-hidden relative rounded-3xl"
             >
               <img
                 className="rounded-2xl bg-cover object-cover "
@@ -44,10 +48,10 @@ const InstrumentsCategory = () => {
               />
 
               <div className="bg-black bg-opacity-80 absolute opacity-0 hover:opacity-100 rounded-xl md:py-10 md:mx-5">
-                <h1 className="text-xs md:text-2xl uppercase font-extrabold  text-[#ff0000] shadow-2xl drop-shadow-xl mb-5 underline">
+                <h1 className="text-xs md:text-2xl uppercase font-extrabold  text-[#ff0000] shadow-2xl drop-shadow-xl md:mb-5 underline">
                   {instrument.name}
                 </h1>
-                <h1 className="text-[8px] text-left md:text-center md:text-lg uppercase  text-[#f2f8f4bd] shadow-2xl drop-shadow-xl">
+                <h1 className="text-[8px] text-left md:text-center md:text-lg md:uppercase  text-[#f2f8f4bd] shadow-2xl drop-shadow-xl">
                   {instrument.description}
                 </h1>
               </div>
@@ -55,7 +59,7 @@ const InstrumentsCategory = () => {
           ))}
         </Swiper>
       </section>
-    </>
+    </div>
   );
 };
 
