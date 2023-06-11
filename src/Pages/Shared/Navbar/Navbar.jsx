@@ -50,22 +50,18 @@ const Navbar = () => {
           Classes
         </NavLink>
       </li>
-      <li className="my-1">
-        <NavLink to="/dashboard" className="navbar_routes_style">
-          Dashboard
-        </NavLink>
-      </li>
+
 
       <li className="my-1">
         <NavLink to="/dashboard/welcome">
-          <button className="">
-            <RiDashboardFill className="text-2xl" />
+          <button className="flex items-center gap-1">
+            <RiDashboardFill className="text-2xl" /> Dashboard
           </button>
         </NavLink>
       </li>
 
       <li>
-        <NavLink to="/dashboard/my-cart">
+        <NavLink to="/dashboard/booked-cart">
           <button className="flex gap-2  items-center">
             <FaShoppingCart />{" "}
             <div className="badge badge-error">{bookedCart?.length || 0}</div>
