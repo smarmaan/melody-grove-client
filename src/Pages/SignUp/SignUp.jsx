@@ -8,7 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const SignUp = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, LogOut } = useContext(AuthContext);
   const [passwordType, setPasswordType] = useState("password");
 
   const navigate = useNavigate();
@@ -42,7 +42,8 @@ const SignUp = () => {
             timer: 1500,
           });
 
-          navigate("/");
+          LogOut();
+          navigate("/login");
         })
 
         .catch((error) => {
@@ -72,8 +73,9 @@ const SignUp = () => {
               <div className="relative z-5 mt-24 md:mt-0 md:top-5 md:left-16">
                 <h1 className="text-4xl font-bold my-5">Sign Up!</h1>
                 <p className="pr-16">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ipsum, exercitationem iusto voluptatem aliquam fuga
+                  Unlock Your Musical Potential. Join Melody Grove Today! Live
+                  your emotions ........................... Join with our
+                  team... Be our family........
                 </p>
                 <Link to="/">
                   {" "}
@@ -92,7 +94,7 @@ const SignUp = () => {
 
 
  */}
-          <div className="card bg-[url('https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?cs=srgb&dl=pexels-philip-boakye-3428498.jpg&fm=jpg')] bg-cover drop-shadow-2xl max-w-m shadow-2xl my-10">
+          <div className="card bg-[url('')] bg-cover drop-shadow-2xl max-w-m shadow-2xl my-10">
             <div className="hero-overlay bg-opacity-10"></div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
