@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { MdArrowDropDownCircle } from "react-icons/md";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { RiDashboardFill } from "react-icons/ri";
-import {  FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import useBookedCart from "../../../Hooks/useBookedCart";
 
 const Navbar = () => {
@@ -51,7 +51,6 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-
       <li className="my-1">
         <NavLink to="/dashboard/welcome">
           <button className="flex items-center gap-1">
@@ -61,7 +60,7 @@ const Navbar = () => {
       </li>
 
       <li>
-        <NavLink to="/dashboard/booked-cart">
+        <NavLink to="/dashboard/booked-courses">
           <button className="flex gap-2  items-center">
             <FaShoppingCart />{" "}
             <div className="badge badge-error">{bookedCart?.length || 0}</div>

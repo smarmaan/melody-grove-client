@@ -1,10 +1,19 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaBookmark, FaHome, FaUsers } from "react-icons/fa";
-import { MdOutlineClass } from "react-icons/md";
+import {
+  FaBookmark,
+  FaHome,
+  FaUsers,
+  FaUsersCog,
+  FaMoneyCheck,
+} from "react-icons/fa";
+import { MdOutlineClass, MdClass } from "react-icons/md";
 import useBookedCart from "../Hooks/useBookedCart";
 
 const Dashboard = () => {
   const [bookedCart] = useBookedCart();
+
+  const isAdmin = true;
+  const isInstructor = false;
 
   return (
     <div className="drawer lg:drawer-open drawer-mobile">
@@ -27,16 +36,82 @@ const Dashboard = () => {
         <ul className="menu gap-2 p-4 w-80  bg-[url('https://media.istockphoto.com/id/1212342896/vector/abstract-hexagon-wallpaper-white-background-3d-vector-illustration.jpg?s=612x612&w=0&k=20&c=ynRzXUZ4_Ga3Y7joKBABdXUQI4xBvrdHJnYueJWEiw8=')]  ">
           {/* Sidebar content here */}
 
-          <li>
-            <NavLink to="/dashboard/booked-cart">
-              <button className="flex gap-2 items-center">
-                <FaBookmark /> My Booked Courses
-                <div className="badge badge-error">
-                  {bookedCart?.length || 0}
-                </div>
-              </button>
-            </NavLink>
-          </li>
+          {/*                                      */}
+
+          {(isAdmin && (
+            <>
+              <li>
+                <NavLink to="/dashboard/admin-home">
+                  <FaHome />
+                  Admin Home
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/dashboard/manage-courses">
+                  <MdClass /> Manage Courses
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/dashboard/manage-users">
+                  <FaUsersCog /> Manage Users
+                </NavLink>
+              </li>
+            </>
+          )) ||
+            (isInstructor && (
+              <>
+                <li>
+                  <NavLink to="/dashboard/instructor-home">
+                    <FaHome /> Instructor Home
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/dashboard/add-courses">
+                    <FaHome /> Add Courses
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/dashboard/my-courses">
+                    <FaHome /> My Courses
+                  </NavLink>
+                </li>
+              </>
+            )) || (
+              <>
+                <li>
+                  <NavLink to="/dashboard/user-home">
+                    <FaHome /> User Home
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/dashboard/booked-courses">
+                    <button className="flex gap-2 items-center">
+                      <FaBookmark /> My Booked Courses
+                      <div className="badge badge-error">
+                        {bookedCart?.length || 0}
+                      </div>
+                    </button>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/dashboard/enrolled-courses">
+                    <FaMoneyCheck /> Enrolled Courses
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/dashboard/payment-history">
+                    <FaMoneyCheck /> Payment History
+                  </NavLink>
+                </li>
+              </>
+            )}
 
           <div className="divider"></div>
 
@@ -54,7 +129,7 @@ const Dashboard = () => {
 
           <li>
             <NavLink to="/classes">
-              <MdOutlineClass /> All Classes
+              <MdOutlineClass /> All Courses
             </NavLink>
           </li>
         </ul>

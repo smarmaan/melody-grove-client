@@ -9,6 +9,15 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layouts/Dashboard";
 import Welcome from "../Pages/Dashboard/Welcome/Welcome";
 import BookedCart from "../Pages/Dashboard/BookedCart/BookedCart";
+import AdminHome from "../Pages/Dashboard/Admin/AdminHome";
+import UserHome from "../Pages/Dashboard/User/UserHome";
+import ManageCourses from "../Pages/Dashboard/Admin/ManageCourses";
+import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers";
+import InstructorHome from "../Pages/Dashboard/Instructor/InstructorHome";
+import AddCourses from "../Pages/Dashboard/Instructor/AddCourses";
+import MyCourses from "../Pages/Dashboard/Instructor/MyCourses";
+import EnrolledCourses from "../Pages/Dashboard/User/EnrolledCourses";
+import PaymentHistory from "../Pages/Dashboard/User/PaymentHistory";
 
 export const router = createBrowserRouter([
   {
@@ -50,8 +59,44 @@ export const router = createBrowserRouter([
         element: <Welcome />,
       },
       {
-        path: "booked-cart",
+        path: "admin-home",
+        element: <AdminHome />,
+      },
+      {
+        path: "manage-courses",
+        element: <ManageCourses />,
+      },
+      {
+        path: "manage-users",
+        element: <ManageUsers />,
+      },
+      {
+        path: "instructor-home",
+        element: <InstructorHome />,
+      },
+      {
+        path: "add-courses",
+        element: <AddCourses />,
+      },
+      {
+        path: "my-courses",
+        element: <MyCourses />,
+      },
+      {
+        path: "user-home",
+        element: <UserHome />,
+      },
+      {
+        path: "booked-courses",
         element: <BookedCart />,
+      },
+      {
+        path: "enrolled-courses",
+        element: <EnrolledCourses />,
+      },
+      {
+        path: "payment-history",
+        element: <PaymentHistory />,
       },
     ],
   },
