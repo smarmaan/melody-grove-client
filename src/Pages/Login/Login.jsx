@@ -62,7 +62,7 @@ const Login = () => {
       <Helmet>
         <title> Melody Grove | Login </title>
       </Helmet>
-      <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover">
+      <div className="hero min-h-screen bg-[url('https://i.ibb.co/DfK7L2T/bg.jpg')] bg-cover font-Cambria">
         <div className="hero-overlay bg-opacity-30"></div>
 
         <div className="hero-content flex-col md:flex-row-reverse gap-48 md:gap-10">
@@ -77,9 +77,9 @@ const Login = () => {
               <div className="relative z-5 mt-24 md:mt-0 md:top-5 md:left-16">
                 <h1 className="text-4xl font-bold my-5">Login now!</h1>
                 <p className="pr-16">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ipsum, exercitationem aliquid obcaecati iusto voluptatem
-                  aliquam fuga eaque q
+                  Login now to our institute.. your institute ... we enjoy like
+                  a family... achieve like a family... we hold your hand when
+                  you feel like nobody is here ....
                 </p>
                 <Link to="/">
                   {" "}

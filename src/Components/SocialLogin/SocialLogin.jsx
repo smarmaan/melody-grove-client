@@ -1,6 +1,6 @@
 const SocialLogin = () => {
   return (
-    <div>
+    <>
       <div className="divider m-2"></div>
 
       <div className="text-center mb-2">
@@ -12,7 +12,7 @@ const SocialLogin = () => {
           />
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
