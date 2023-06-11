@@ -3,6 +3,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdArrowDropDownCircle } from "react-icons/md";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import { RiDashboardFill } from "react-icons/ri";
+
 const Navbar = () => {
   const { user, LogOut } = useContext(AuthContext);
 
@@ -44,16 +46,24 @@ const Navbar = () => {
           Classes
         </NavLink>
       </li>
-      <li className="my-1 ">
+      <li className="my-1">
         <NavLink to="/dashboard" className="navbar_routes_style">
           Dashboard
+        </NavLink>
+      </li>
+
+      <li className="my-1">
+        <NavLink to="/dashboard/welcome">
+          <button className="">
+            <RiDashboardFill className="text-2xl" />
+          </button>
         </NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar fixed z-10 bg-opacity-50 bg-base-100">
+    <div className="navbar fixed z-10 bg-opacity-50 bg-black font-Cambria font-extrabold">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -74,7 +84,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content  text-base-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navRouteOptions}
           </ul>
@@ -88,7 +98,7 @@ const Navbar = () => {
           <h2 className="bg-white px-2 rounded-full py-1"> Melody Grove</h2>{" "}
         </a>
       </div>
-      <div className="navbar justify-center hidden lg:flex">
+      <div className="navbar justify-center hidden lg:flex text-base-content">
         <ul className="menu menu-horizontal px-1">{navRouteOptions}</ul>
       </div>
 
