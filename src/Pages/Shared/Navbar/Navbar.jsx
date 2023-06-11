@@ -4,9 +4,13 @@ import { NavLink } from "react-router-dom";
 import { MdArrowDropDownCircle } from "react-icons/md";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { RiDashboardFill } from "react-icons/ri";
+import {  FaShoppingCart } from "react-icons/fa";
+import useBookedCart from "../../../Hooks/useBookedCart";
 
 const Navbar = () => {
   const { user, LogOut } = useContext(AuthContext);
+
+  const [bookedCart] = useBookedCart();
 
   const themes = ["light", "dark", "cupcake", "night"];
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -56,6 +60,15 @@ const Navbar = () => {
         <NavLink to="/dashboard/welcome">
           <button className="">
             <RiDashboardFill className="text-2xl" />
+          </button>
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/dashboard/my-cart">
+          <button className="flex gap-2  items-center">
+            <FaShoppingCart />{" "}
+            <div className="badge badge-error">{bookedCart?.length || 0}</div>
           </button>
         </NavLink>
       </li>
