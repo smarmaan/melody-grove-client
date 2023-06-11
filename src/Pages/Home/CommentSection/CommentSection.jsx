@@ -19,7 +19,7 @@ const CommentSection = () => {
   return (
     <div className="my-20 container mx-auto">
       <Title
-        heading={"Review Section "}
+        heading={"Review Section of users"}
         subheading={"Precious reviews of our Students"}
       ></Title>
 

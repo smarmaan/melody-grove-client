@@ -8,7 +8,7 @@ const PopularInstructorCard = ({ info }) => {
       </>
       <div className="card-body  bg-opacity-30 opacity-0 hover:opacity-100 flex-col justify-center items-center bg-[#ffe36b] bg-cover rounded-2xl absolute inset-0">
         <h2 className="card-title md:text-3xl">{name}</h2>
-        <h2 className="card-title md:text-lg">Email: {email}</h2>
+        <h2 className="card-title text-[17px] md:text-lg">Email: {email}</h2>
         <h2 className="card-title md:text-lg">
           Instructor for{" "}
           {classes.map((classes, index) => (

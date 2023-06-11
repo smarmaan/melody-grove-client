@@ -3,7 +3,7 @@ const PopularClassCard = ({ info }) => {
 
   return (
     <>
-      <div className=" card card-compact w-full  shadow-2xl drop-shadow-2xl">
+      <div className=" card card-compact w-96  shadow-2xl drop-shadow-2xl">
         <figure className="w-full h-full">
           <img src={image} className="object-cover w-full h-96" alt={name} />
         </figure>
