@@ -13,14 +13,14 @@ const InstructorCard = ({ info }) => {
         <p>Number of Students : {students}</p>
         <p>Rating : {rating}</p>
         <p>{details}</p>
-        <p className="">
+        <div className="">
           {classes.map((classes, index) => (
             <div className="flex-col gap-10" key={index}>
               <li>Class Name : {classes.name}</li>
               <p> ------ Number of Classes : {classes.numClasses}</p>
             </div>
           ))}
-        </p>
+        </div>
       </div>
     </div>
   );
