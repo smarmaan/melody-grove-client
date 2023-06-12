@@ -4,23 +4,29 @@ import { useState } from "react";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import { useContext } from "react";
 import { AuthContext } from "../../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+import useBookedCart from "../../../../Hooks/useBookedCart";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = ({ price }) => {
   const [cardError, setCardError] = useState("");
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useContext(AuthContext);
-
+  const [bookedCart, refetch] = useBookedCart();
   const [clientSecret, setClientSecret] = useState("");
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
-
   const [axiosSecure] = useAxiosSecure();
+
+  const cart = bookedCart;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (price > 0) {
       axiosSecure.post("/create-payment-intent", { price }).then((res) => {
-        console.log(res.data.clientSecret);
+        // console.log(res.data.clientSecret);
         setClientSecret(res.data.clientSecret);
       });
     }
@@ -45,7 +51,7 @@ const CheckoutForm = ({ price }) => {
     });
 
     if (error) {
-      console.log("error", error);
+      // console.log("error", error);
       setCardError(error.message);
     } else {
       setCardError("");
@@ -75,6 +81,33 @@ const CheckoutForm = ({ price }) => {
 
     if (paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
+
+      const payment = {
+        coursePurchasedID: cart._id,
+        cartCourses: cart.map((course) => course._id),
+        courseName: cart.courseName,
+        email: user?.email,
+        image: cart.image,
+        price,
+        transactionId: paymentIntent.id,
+        date: new Date(),
+      };
+      axiosSecure.post("/payments", payment).then((res) => {
+        console.log(res.data);
+
+        if (res.data.insertResult.insertedId) {
+          refetch();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Transaction Successful",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+
+          navigate("/dashboard/booked-courses");
+        }
+      });
     }
   };
 
