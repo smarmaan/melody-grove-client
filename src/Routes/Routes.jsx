@@ -19,6 +19,7 @@ import MyCourses from "../Pages/Dashboard/Instructor/MyCourses";
 import EnrolledCourses from "../Pages/Dashboard/User/EnrolledCourses";
 import PaymentHistory from "../Pages/Dashboard/User/PaymentHistory";
 import AdminRoute from "./AdminRoute";
+import InstructorRoute from "./InstructorRoute";
 
 export const router = createBrowserRouter([
   {
@@ -85,15 +86,27 @@ export const router = createBrowserRouter([
       },
       {
         path: "instructor-home",
-        element: <InstructorHome />,
+        element: (
+          <InstructorRoute>
+            <InstructorHome />
+          </InstructorRoute>
+        ),
       },
       {
         path: "add-courses",
-        element: <AddCourses />,
+        element: (
+          <InstructorRoute>
+            <AddCourses />
+          </InstructorRoute>
+        ),
       },
       {
         path: "my-courses",
-        element: <MyCourses />,
+        element: (
+          <InstructorRoute>
+            <MyCourses />
+          </InstructorRoute>
+        ),
       },
       {
         path: "user-home",
@@ -116,7 +129,7 @@ export const router = createBrowserRouter([
 ]);
 
 {
-  /* <AdminRoute>
-<ManageUsers />
-</AdminRoute> */
+  /* <InstructorRoute>
+<MyCourses />
+</InstructorRoute> */
 }
