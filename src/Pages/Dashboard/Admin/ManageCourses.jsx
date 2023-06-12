@@ -38,7 +38,58 @@ const ManageCourses = () => {
   };
 
   const handleDeny = (course) => {
-    console.log(course._id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Deny it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Enter Reason for Denial",
+          input: "textarea",
+          inputPlaceholder: "Enter your reason here...",
+          inputAttributes: {
+            "aria-label": "Enter your reason here",
+          },
+          showCancelButton: true,
+          confirmButtonText: "Submit",
+          cancelButtonText: "Cancel",
+          preConfirm: (reason) => {
+            if (!reason) {
+              Swal.showValidationMessage("Please enter a reason");
+            }
+            return reason;
+          },
+        }).then((result) => {
+          if (result.isConfirmed) {
+            const reason = result.value;
+            axiosSecure
+              .patch(`/available-Courses/deny/${course._id}`, {
+                status: "denied",
+                key: reason,
+              })
+              .then((res) => {
+                console.log(res.data);
+
+                if (res.data.modifiedCount > 0) {
+                  refetch();
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${course.courseName} is on denied list..`,
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                }
+              });
+          }
+        });
+      }
+    });
   };
 
   return (
