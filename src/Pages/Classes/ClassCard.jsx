@@ -7,12 +7,13 @@ import useBookedCart from "../../Hooks/useBookedCart";
 const ClassCard = ({ course }) => {
   const {
     _id,
-    name,
-    description,
+    courseName,
+    instructorEmail,
+    instructorName,
     image,
     students,
-    rating: price,
-    activities,
+    price,
+    seats,
   } = course;
 
   const { user } = useContext(AuthContext);
@@ -29,7 +30,7 @@ const ClassCard = ({ course }) => {
       const bookedCourse = {
         courseId: _id,
         _id,
-        name,
+        courseName,
         image,
         price,
         email: user.email,
@@ -76,19 +77,23 @@ const ClassCard = ({ course }) => {
   return (
     <div className="card card-compact w-96 shadow-2xl drop-shadow-2xl text-base-content">
       <figure className="w-full h-full">
-        <img src={image} className="object-cover w-full h-96" alt={name} />
+        <img
+          src={image}
+          className="object-cover w-full h-96"
+          alt={courseName}
+        />
       </figure>
       <div className="card-body bg-[#fc712b] bg-cover rounded-ee-2xl rounded-es-2xl ">
-        <h2 className="card-title md:text-4xl">{name}</h2>
+        <h2 className="card-title md:text-4xl">{courseName}</h2>
         <h2 className="card-title">Number of Students: {students}</h2>
         <h2 className="card-title">Price : {price}</h2>
-        <p>{description}</p>
-        <p>{_id}</p>
-        <p>
-          {activities.map((activity, index) => (
-            <li key={index}>{activity}</li>
-          ))}
-        </p>
+        <h2 className="card-title">Available seats : {seats}</h2>
+        <h2 className="card-title">Instructor Details: </h2>
+        <h2 className="card-title md:text-lg text-center">
+          {instructorName} <br />
+          {instructorEmail}
+        </h2>
+
         <button
           onClick={() => handleAddToBookedCart(course)}
           className="btn"

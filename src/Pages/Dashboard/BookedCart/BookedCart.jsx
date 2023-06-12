@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import useBookedCart from "../../../Hooks/useBookedCart";
-import { BsTrash3Fill } from "react-icons/bs";
+import { BsCurrencyDollar, BsTrash3Fill } from "react-icons/bs";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const BookedCart = () => {
   const [bookedCart, refetch] = useBookedCart();
@@ -46,8 +47,6 @@ const BookedCart = () => {
       <div>
         <h2>Number of Booked Courses : {bookedCart.length}</h2>
         <h2>Total Amount : {totalFixed}</h2>
-
-        <button className="btn btn-xs">Pay</button>
       </div>
 
       <>
@@ -61,6 +60,7 @@ const BookedCart = () => {
                 <th>ITEM NAME</th>
                 <th>PRICE</th>
                 <th>ACTION</th>
+                <th>PAY</th>
               </tr>
             </thead>
             <tbody className="">
@@ -79,7 +79,7 @@ const BookedCart = () => {
                       </div>
                     </div>
                   </td>
-                  <td>{course.name}</td>
+                  <td>{course.courseName}</td>
                   <td> $ {course.price}</td>
                   <td>
                     <button
@@ -87,6 +87,13 @@ const BookedCart = () => {
                       className="btn btn-ghost btn-xs bg-[#B91C1C]"
                     >
                       <BsTrash3Fill className=" text-white" />
+                    </button>
+                  </td>
+                  <td>
+                    <button className="btn btn-ghost btn-xs bg-[#d17b34af]">
+                      <Link to={`/dashboard/payment/${course._id}`}>
+                        <BsCurrencyDollar className="text-lg text-white" />
+                      </Link>
                     </button>
                   </td>
                 </tr>
