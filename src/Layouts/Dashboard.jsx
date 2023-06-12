@@ -9,11 +9,13 @@ import {
 import { MdOutlineClass, MdClass } from "react-icons/md";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import useBookedCart from "../Hooks/useBookedCart";
+import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
   const [bookedCart] = useBookedCart();
 
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
+
   const isInstructor = false;
 
   return (
