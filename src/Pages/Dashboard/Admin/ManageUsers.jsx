@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
-// import { FaUserShield } from "react-icons/fa";
 import { MdArrowDropDownCircle } from "react-icons/md";
 
 const ManageUsers = () => {
@@ -72,35 +71,27 @@ const ManageUsers = () => {
               <th>ACTION</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="">
             {users.map((user, index) => (
               <tr key={user._id}>
                 <th>{index + 1}</th>
                 <td> {user.name} </td>
                 <td> {user.email} </td>
-                <td>{user.role}</td>
+                <td className="uppercase">{user.role}</td>
 
                 <td className="uppercase">
-                  {/* {user.role === "admin" ? (
-                    "admin"
-                  ) : (
-                    <button
-                      onClick={() => handleMakeAdmin(user)}
-                      className="btn btn-ghost btn-xs bg-[#D1A054]"
-                    >
-                      <FaUserShield className=" text-white" />
-                    </button>
-                  )} */}
-
-                  <div className="dropdown dropdown-bottom dropdown-end z-10 text-base-content">
+                  <div className="dropdown dropdown-top dropdown-end z-10 text-base-content">
                     <label tabIndex={0} className="btn btn-xs">
                       <MdArrowDropDownCircle></MdArrowDropDownCircle>
                     </label>
                     <ul
                       tabIndex={0}
-                      className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                      className="dropdown-content menu p-2 shadow bg-base-100 rounded-box flex gap-2 px-4"
                     >
-                      <button onClick={() => handleMakeAdmin(user)}>
+                      <button
+                        className=""
+                        onClick={() => handleMakeAdmin(user)}
+                      >
                         Admin
                       </button>
                       <button onClick={() => handleMakeInstructor(user)}>
