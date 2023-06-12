@@ -7,6 +7,7 @@ import {
   FaMoneyCheck,
 } from "react-icons/fa";
 import { MdOutlineClass, MdClass } from "react-icons/md";
+import { BsBookmarkPlusFill } from "react-icons/bs";
 import useBookedCart from "../Hooks/useBookedCart";
 
 const Dashboard = () => {
@@ -101,7 +102,7 @@ const Dashboard = () => {
 
                 <li>
                   <NavLink to="/dashboard/enrolled-courses">
-                    <FaMoneyCheck /> Enrolled Courses
+                    <BsBookmarkPlusFill /> Enrolled Courses
                   </NavLink>
                 </li>
 
