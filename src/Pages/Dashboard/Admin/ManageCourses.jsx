@@ -134,7 +134,7 @@ const ManageCourses = () => {
                 <td className=" my-10 ">
                   <details
                     className={`dropdown mb-11 relative ${
-                      course.status === "approved" && "hidden"
+                      course.status !== "pending" && "hidden"
                     }`}
                   >
                     <summary className="m-1 btn btn-xs">Update</summary>
