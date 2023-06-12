@@ -2,8 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { MdArrowDropDownCircle } from "react-icons/md";
+import { useState } from "react";
 
 const ManageUsers = () => {
+  const [disabledButtons, setDisabledButtons] = useState([]);
+
   const { data: users = [], refetch } = useQuery(["users"], async () => {
     const res = await fetch(`http://localhost:5000/users`);
     return res.json();
@@ -25,6 +28,11 @@ const ManageUsers = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+
+          setDisabledButtons((prevDisabledButtons) => [
+            ...prevDisabledButtons,
+            user._id,
+          ]);
         }
       });
   };
@@ -45,9 +53,16 @@ const ManageUsers = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+
+          setDisabledButtons((prevDisabledButtons) => [
+            ...prevDisabledButtons,
+            user._id,
+          ]);
         }
       });
   };
+
+  const isButtonDisabled = (userId) => disabledButtons.includes(userId);
 
   return (
     <div className="text-center">
@@ -75,26 +90,38 @@ const ManageUsers = () => {
             {users.map((user, index) => (
               <tr key={user._id}>
                 <th>{index + 1}</th>
-                <td> {user.name} </td>
-                <td> {user.email} </td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
                 <td className="uppercase">{user.role}</td>
 
                 <td className="uppercase">
-                  <div className="dropdown dropdown-top dropdown-end z-10 text-base-content">
+                  <div className="dropdown dropdown-top dropdown-end z-10 ">
                     <label tabIndex={0} className="btn btn-xs">
                       <MdArrowDropDownCircle></MdArrowDropDownCircle>
                     </label>
+
                     <ul
                       tabIndex={0}
-                      className="dropdown-content menu p-2 shadow bg-base-100 rounded-box flex gap-2 px-4"
+                      className={`dropdown-content menu p-2 shadow  rounded-box flex gap-2 px-4 bg-red-600 ${
+                        user.role === "admin" && "hidden"
+                      }`}
                     >
                       <button
-                        className=""
+                        className={`${
+                          user.role === "admin" && "disabled"
+                        } btn btn-xs`}
                         onClick={() => handleMakeAdmin(user)}
+                        disabled={isButtonDisabled(user._id)}
                       >
                         Admin
                       </button>
-                      <button onClick={() => handleMakeInstructor(user)}>
+                      <button
+                        className={`${
+                          user.role === "admin" && "disabled"
+                        } btn btn-xs`}
+                        onClick={() => handleMakeInstructor(user)}
+                        disabled={isButtonDisabled(user._id)}
+                      >
                         Instructor
                       </button>
                     </ul>
