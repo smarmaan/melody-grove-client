@@ -10,13 +10,13 @@ import { MdOutlineClass, MdClass } from "react-icons/md";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import useBookedCart from "../Hooks/useBookedCart";
 import useAdmin from "../Hooks/useAdmin";
+import useInstructor from "../Hooks/useInstructor";
 
 const Dashboard = () => {
   const [bookedCart] = useBookedCart();
 
   const [isAdmin] = useAdmin();
-
-  const isInstructor = false;
+  const [isInstructor] = useInstructor();
 
   return (
     <div className="drawer lg:drawer-open drawer-mobile">
