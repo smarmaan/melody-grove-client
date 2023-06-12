@@ -97,21 +97,25 @@ const ManageUsers = () => {
                 <td>{user.email}</td>
                 <td className="uppercase">{user.role}</td>
 
-                <td className="uppercase">
+                <td
+                  className={`uppercase ${
+                    user.role === "admin" && "disabled hidden"
+                  } `}
+                >
                   <div className="dropdown dropdown-top dropdown-end z-10 ">
                     <label tabIndex={0} className="btn btn-xs">
                       <MdArrowDropDownCircle></MdArrowDropDownCircle>
                     </label>
 
-                    <ul
+                    <div
                       tabIndex={0}
                       className={`dropdown-content menu p-2 shadow  rounded-box flex gap-2 px-4 bg-red-600 ${
-                        user.role === "admin" && "hidden"
+                        user.role === "admin" && " hidden"
                       }`}
                     >
                       <button
                         className={`${
-                          user.role === "admin" && "disabled"
+                          user.role === "admin" && "disabled hidden"
                         } btn btn-xs`}
                         onClick={() => handleMakeAdmin(user)}
                         disabled={isButtonDisabled(user._id)}
@@ -120,14 +124,14 @@ const ManageUsers = () => {
                       </button>
                       <button
                         className={`${
-                          user.role === "admin" && "disabled"
+                          user.role === "admin" && "disabled hidden"
                         } btn btn-xs`}
                         onClick={() => handleMakeInstructor(user)}
                         disabled={isButtonDisabled(user._id)}
                       >
                         Instructor
                       </button>
-                    </ul>
+                    </div>
                   </div>
                 </td>
               </tr>
