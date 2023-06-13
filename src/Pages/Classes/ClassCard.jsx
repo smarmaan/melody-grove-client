@@ -82,7 +82,11 @@ const ClassCard = ({ course }) => {
           alt={courseName}
         />
       </figure>
-      <div className="card-body bg-[#fc712b] bg-cover rounded-ee-2xl rounded-es-2xl ">
+      <div
+        className={`card-body bg-[#fc712b] ${
+          seats === 0 && "bg-[#fc0202]"
+        } bg-cover rounded-ee-2xl rounded-es-2xl `}
+      >
         <h2 className="card-title md:text-4xl">{courseName}</h2>
         <h2 className="card-title">Number of Students: {students}</h2>
         <h2 className="card-title">Price : {price}</h2>
@@ -96,7 +100,7 @@ const ClassCard = ({ course }) => {
         <button
           onClick={() => handleAddToBookedCart(course)}
           className="btn"
-          disabled={isCourseBooked} // Disable the button if the course is already booked
+          disabled={isCourseBooked || seats === 0} // Disable the button if the course is already booked
         >
           {isCourseBooked ? "Course Booked" : "Book Now"}
         </button>
