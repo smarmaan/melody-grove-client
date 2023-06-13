@@ -29,7 +29,6 @@ const ClassCard = ({ course }) => {
     if (user && user.email) {
       const bookedCourse = {
         courseId: _id,
-        _id,
         courseName,
         image,
         price,
@@ -99,7 +98,7 @@ const ClassCard = ({ course }) => {
           className="btn"
           disabled={isCourseBooked} // Disable the button if the course is already booked
         >
-          {isCourseBooked ? "Course Booked" : "Enroll now"}
+          {isCourseBooked ? "Course Booked" : "Book Now"}
         </button>
       </div>
     </div>

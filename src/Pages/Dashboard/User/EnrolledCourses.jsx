@@ -1,5 +1,5 @@
 const EnrolledCourses = () => {
-  return <div>Enrolled Courses</div>;
+  return <div>EnrolledCourses</div>;
 };
 
 export default EnrolledCourses;

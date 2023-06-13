@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import useBookedCart from "../../../../Hooks/useBookedCart";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutForm = ({ price }) => {
+const CheckoutForm = ({ id, price }) => {
   const [cardError, setCardError] = useState("");
   const stripe = useStripe();
   const elements = useElements();
@@ -19,8 +19,9 @@ const CheckoutForm = ({ price }) => {
   const [transactionId, setTransactionId] = useState("");
   const [axiosSecure] = useAxiosSecure();
 
+  const coursePurchasedID = id.id;
   const cart = bookedCart;
-
+  console.log(coursePurchasedID);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -83,8 +84,7 @@ const CheckoutForm = ({ price }) => {
       setTransactionId(paymentIntent.id);
 
       const payment = {
-        coursePurchasedID: cart._id,
-        cartCourses: cart.map((course) => course._id),
+        coursePurchasedID,
         courseName: cart.courseName,
         email: user?.email,
         image: cart.image,
