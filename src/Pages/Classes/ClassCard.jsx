@@ -3,6 +3,8 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useBookedCart from "../../Hooks/useBookedCart";
+import useAdmin from "../../Hooks/useAdmin";
+import useInstructor from "../../Hooks/useInstructor";
 
 const ClassCard = ({ course }) => {
   const {
@@ -17,6 +19,10 @@ const ClassCard = ({ course }) => {
   } = course;
 
   const { user } = useContext(AuthContext);
+
+  const [isAdmin] = useAdmin();
+
+  const [isInstructor] = useInstructor();
 
   const [bookedCart, refetch] = useBookedCart();
 
@@ -100,7 +106,7 @@ const ClassCard = ({ course }) => {
         <button
           onClick={() => handleAddToBookedCart(course)}
           className="btn"
-          disabled={isCourseBooked || seats === 0} // Disable the button if the course is already booked
+          disabled={isCourseBooked || seats === 0 || isInstructor || isAdmin} // Disable the button if the course is already booked
         >
           {isCourseBooked ? "Course Booked" : "Book Now"}
         </button>
