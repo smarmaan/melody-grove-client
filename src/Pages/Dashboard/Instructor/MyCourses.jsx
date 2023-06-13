@@ -4,6 +4,7 @@ import { VscFeedback } from "react-icons/vsc";
 
 const MyCourses = () => {
   const [myCourses] = useMyCourses();
+  console.log(myCourses);
 
   const showFeedback = (course) => {
     console.log(course.reason);
@@ -55,7 +56,7 @@ const MyCourses = () => {
                 <h2 className="btn btn-ghost btn-xs">{course.status}</h2>
               </td>
               <td>
-                <h2 className="btn btn-ghost btn-xs">{""}</h2>
+                <h2 className="btn btn-ghost btn-xs">{course.enrolled}</h2>
               </td>
               <td
                 onClick={() => showFeedback(course)}

@@ -30,10 +30,13 @@ const AddCourses = () => {
 
           const courseInfo = data;
 
+          const enrolled = 0;
+
           courseInfo.image = imgURL;
           courseInfo.price = parseFloat(data.price);
           courseInfo.status = "pending";
-
+          courseInfo.seats = parseFloat(data.seats);
+          courseInfo.enrolled = parseFloat(enrolled);
           console.log(courseInfo);
 
           axiosSecure.post("/available-Courses", courseInfo).then((data) => {
