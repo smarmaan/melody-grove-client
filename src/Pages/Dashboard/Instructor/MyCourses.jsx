@@ -55,7 +55,7 @@ const MyCourses = () => {
               <td>
                 <h2 className="btn btn-ghost btn-xs">{course.status}</h2>
               </td>
-              <td>
+              <td className={`${course.status === "pending" && "hidden"}`}>
                 <h2 className="btn btn-ghost btn-xs">{course.enrolled}</h2>
               </td>
               <td
