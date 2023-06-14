@@ -11,7 +11,7 @@ const PopularInstructors = () => {
   };
 
   useEffect(() => {
-    let url = "http://localhost:5000/popular-instructors";
+    let url = "https://melody-grove-server.vercel.app/popular-instructors";
     if (showAll) {
       url += "?showAll=true";
     }

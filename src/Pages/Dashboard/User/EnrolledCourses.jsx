@@ -11,7 +11,7 @@ const EnrolledCourses = () => {
 
   console.log();
   useEffect(() => {
-    fetch(`http://localhost:5000/user-stats/${user?.email}`)
+    fetch(`https://melody-grove-server.vercel.app/user-stats/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUserEnrolledData(data);

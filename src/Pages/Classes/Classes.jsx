@@ -7,7 +7,8 @@ const Classes = () => {
   const [availableCourses, setAvailableCourses] = useState([]);
 
   useEffect(() => {
-    let url = "http://localhost:5000/available-Courses-approved";
+    let url =
+      "https://melody-grove-server.vercel.app/available-Courses-approved";
 
     fetch(url)
       .then((res) => res.json())

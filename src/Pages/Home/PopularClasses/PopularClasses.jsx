@@ -12,7 +12,7 @@ const PopularClasses = () => {
   };
 
   useEffect(() => {
-    let url = "http://localhost:5000/popular-courses";
+    let url = "https://melody-grove-server.vercel.app/popular-courses";
     if (showAll) {
       url += "?showAll=true";
     }
