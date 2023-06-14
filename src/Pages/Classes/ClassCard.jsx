@@ -13,7 +13,6 @@ const ClassCard = ({ course }) => {
     instructorEmail,
     instructorName,
     image,
-    students,
     price,
     seats,
   } = course;
@@ -84,21 +83,20 @@ const ClassCard = ({ course }) => {
       <figure className="w-full h-full">
         <img
           src={image}
-          className="object-cover w-full h-96"
+          className="object-cover w-full h-64"
           alt={courseName}
         />
       </figure>
       <div
         className={`card-body bg-[#fc712b] ${
           seats === 0 && "bg-[#fc0202]"
-        } bg-cover rounded-ee-2xl rounded-es-2xl `}
+        } bg-cover rounded-ee-2xl rounded-es-2xl  `}
       >
         <h2 className="card-title md:text-4xl">{courseName}</h2>
-        <h2 className="card-title">Number of Students: {students}</h2>
         <h2 className="card-title">Price : {price}</h2>
         <h2 className="card-title">Available seats : {seats}</h2>
         <h2 className="card-title">Instructor Details: </h2>
-        <h2 className="card-title md:text-lg text-center">
+        <h2 className="card-title md:text-lg text-center mx-auto">
           {instructorName} <br />
           {instructorEmail}
         </h2>

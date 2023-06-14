@@ -25,7 +25,7 @@ const Classes = () => {
       </Helmet>
 
       <section className="flex">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 justify-center items-center font-Cambria  mx-24 md:mx-auto">
+        <div className="grid grid-cols-1 my-28 md:grid-cols-2 lg:grid-cols-3 gap-20 justify-center items-center font-Cambria  mx-24 md:mx-auto">
           {availableCourses.map((course) => (
             <ClassCard key={course._id} course={course}></ClassCard>
           ))}
