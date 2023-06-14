@@ -5,3 +5,8 @@
 .navbar_routes_style {
   @apply lg:bg-transparent  hover:text-black md:text-xl;
 }
+
+
+.banner_style_class{
+  @apply  bg-black bg-opacity-80 absolute opacity-0 hover:opacity-100 rounded-3xl p-5 md:p-16 mx-10 md:mx-56 shadow-2xl drop-shadow-2xl 
+}

@@ -39,7 +39,7 @@ const Banner = () => {
             alt="instrument"
           />
 
-          <div className="bg-black bg-opacity-80 absolute opacity-0 hover:opacity-100 rounded-xl md:py-10 md:mx-5 p-10 mx-10">
+          <div className="banner_style_class">
             <h1 className="text-[20px] md:text-2xl uppercase font-extrabold  text-[#ffae00] shadow-2xl drop-shadow-xl md:mb-5 underline">
               Welcome to Melody Grove:
               <br /> Your Harmonious Summer Camp Experience
@@ -65,7 +65,7 @@ const Banner = () => {
             alt="instrument"
           />
 
-          <div className="bg-black bg-opacity-80 absolute opacity-0 hover:opacity-100 rounded-xl md:py-10 md:mx-5 p-10 mx-10">
+          <div className="banner_style_class">
             <h1 className="text-[20px] md:text-2xl uppercase font-extrabold  text-[#ffae00] shadow-2xl drop-shadow-xl md:mb-5 underline">
               Ignite Your Musical Passion in the Summer Sun
             </h1>
@@ -89,7 +89,7 @@ const Banner = () => {
             alt="instrument"
           />
 
-          <div className="bg-black bg-opacity-80 absolute opacity-0 hover:opacity-100 rounded-xl md:py-10 md:mx-5 p-10 mx-10">
+          <div className="banner_style_class">
             <h1 className="text-[20px] md:text-2xl uppercase font-extrabold  text-[#ffae00] shadow-2xl drop-shadow-xl md:mb-5 underline">
               Unleash Your Inner Virtuoso at the Ultimate Summer Camp School
             </h1>
@@ -115,7 +115,7 @@ const Banner = () => {
             alt="instrument"
           />
 
-          <div className="bg-black bg-opacity-80 absolute opacity-0 hover:opacity-100 rounded-xl md:py-10 md:mx-5 p-10 mx-10">
+          <div className="banner_style_class">
             <h1 className="text-[20px] md:text-2xl uppercase font-extrabold  text-[#ffae00] shadow-2xl drop-shadow-xl md:mb-5 underline">
               Where the Sounds of Summer Blend with Musical Brilliance{" "}
             </h1>
@@ -134,6 +134,10 @@ const Banner = () => {
             </h1>
           </div>
         </SwiperSlide>
+
+
+
+
       </Swiper>
     </div>
   );
