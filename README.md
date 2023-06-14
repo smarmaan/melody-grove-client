@@ -59,6 +59,6 @@ Our website is built using the following technologies and packages:
 
 ## Live Site
 
-To experience the exciting features of Melody Grove, visit our live site at [www.melodygrove.com](https://www.melodygrove.com).
+To experience the exciting features of Melody Grove, visit our live site at [Melody Grove](https://melody-grove.web.app/).
 
 We hope you enjoy your journey into the world of music and arts at Melody Grove!
