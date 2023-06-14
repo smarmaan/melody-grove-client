@@ -1,3 +1,5 @@
+import { Fade } from "react-awesome-reveal";
+
 const ReviewCard = ({ data }) => {
   const { name, image, review } = data;
 
@@ -20,8 +22,13 @@ const ReviewCard = ({ data }) => {
       </div>
 
       <div className="card-body md:h-48 font-Cambria">
-        <h2 className="card-title mx-auto">{name}</h2>
-        <p className="text-justify">{review}</p>
+        <Fade delay={1e3} cascade damping={1e-1}>
+          <h2 className="card-title mx-auto">{name}</h2>
+        </Fade>
+
+        <Fade delay={1e3} cascade damping={1e-1}>
+          <p className="text-justify">{review}</p>
+        </Fade>
       </div>
     </div>
   );
