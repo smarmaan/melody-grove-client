@@ -1,7 +1,14 @@
-https://swiperjs.com/swiper-api#methods--properties
+client-side code GitHub repo - https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-smarmaan.git
 
-ReactPlayer  ====  https://www.npmjs.com/package/react-player
+server-side code GitHub repo - https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-smarmaan.git
 
-music-illustrations ===== https://www.drawkit.com/illustrations/music-illustrations
+live website link            - https://melody-grove.web.app/
 
-https://unsplash.com/photos/qt7S2QuAhJI
+Admin email                  - armaanhossainirtaza@gmail.com
+
+Admin password               - Armaan7#
+ 
+Instructor  email            - soyebsazid@gmail.com
+
+Instructor  password         - Armaan7#
+ 
