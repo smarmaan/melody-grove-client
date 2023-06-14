@@ -12,3 +12,8 @@ Instructor  email            - soyebsazid@gmail.com
 
 Instructor  password         - Armaan7#
  
+ 
+User email                   - irizvy32@gmail.com	
+
+user password                - Armaan7#
+ 
