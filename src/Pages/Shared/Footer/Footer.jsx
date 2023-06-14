@@ -1,13 +1,11 @@
+import icon from "../../../../public/Gold Modern Music Logo.gif";
+
 const Footer = () => {
   return (
     <>
       <footer className="footer p-10 bg-base-200 text-base-content ">
         <div className="drop-shadow-2xl shadow-inherit rounded-full">
-          <img
-            src="/public/Gold Modern Music Logo.gif"
-            className="w-24 rounded-full mx-auto mb-2"
-            alt=""
-          />
+          <img src={icon} className="w-24 rounded-full mx-auto mb-2" alt="" />
           <span className="footer-title mx-auto">MELODY GROVE</span>
         </div>
         <div>

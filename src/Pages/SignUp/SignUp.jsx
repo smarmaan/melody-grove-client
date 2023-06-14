@@ -6,6 +6,8 @@ import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import signUp from "../../../public/piano-signup.gif";
+
 
 const SignUp = () => {
   const { createUser, updateUserProfile, LogOut } = useContext(AuthContext);
@@ -83,7 +85,7 @@ const SignUp = () => {
           <div className="text-center md:w-1/2 lg:text-left shadow-xl drop-shadow-xl  rounded-2xl text-white">
             <>
               <img
-                src="../../../public/piano-signup.gif"
+                src={signUp}
                 className="w-full mt-20 md:-my-20 rounded-3xl absolute mx-auto"
                 alt=""
               />

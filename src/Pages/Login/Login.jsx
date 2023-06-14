@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-
+import music from "../../../public/music.gif";
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
   const [error, setError] = useState("");
@@ -69,7 +69,7 @@ const Login = () => {
           <div className="text-center md:w-1/2 lg:text-left shadow-xl drop-shadow-xl  rounded-2xl text-white">
             <>
               <img
-                src="../../../public/music.gif"
+                src={music}
                 className="w-full mt-20 md:-my-20 rounded-3xl absolute mx-auto"
                 alt=""
               />

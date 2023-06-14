@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
+import google from "../../../public/google-logo-effect.gif"
 
 const SocialLogin = () => {
   const { GoogleSignIn } = useContext(AuthContext);
@@ -49,7 +50,7 @@ const SocialLogin = () => {
           className="btn btn-circle border-0"
         >
           <img
-            src="/public/google-logo-effect.gif"
+            src={google}
             className="rounded-full"
             alt=""
           />

@@ -6,7 +6,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { RiDashboardFill } from "react-icons/ri";
 import { FaShoppingCart } from "react-icons/fa";
 import useBookedCart from "../../../Hooks/useBookedCart";
-
+import icon from "../../../../public/Gold Modern Music Logo.gif";
 const Navbar = () => {
   const { user, LogOut } = useContext(AuthContext);
 
@@ -98,12 +98,10 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="normal-case md:text-xl flex justify-center items-center gap-10">
-          <img
-            src="../../../../public/Gold Modern Music Logo.gif"
-            className="w-16 rounded-full"
-            alt=""
-          />
-          <h2 className="bg-white px-2 rounded-full py-1"> Melody Grove</h2>{" "}
+          <img src={icon} className="w-16 rounded-full" alt="" />
+          <h2 className="bg-white px-2 rounded-full py-1">
+            Melody Grove
+          </h2>
         </a>
       </div>
       <div className="navbar justify-center hidden lg:flex text-base-content">
