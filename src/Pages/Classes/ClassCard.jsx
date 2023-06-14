@@ -89,7 +89,7 @@ const ClassCard = ({ course }) => {
       </figure>
       <div
         className={`card-body bg-[#fc712b] ${
-          seats === 0 && "bg-[#fc0202]"
+          seats === 0 && "bg-[#f00707]"
         } bg-cover rounded-ee-2xl rounded-es-2xl  `}
       >
         <h2 className="card-title md:text-4xl">{courseName}</h2>
