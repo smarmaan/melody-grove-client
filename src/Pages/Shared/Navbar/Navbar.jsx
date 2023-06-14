@@ -7,10 +7,15 @@ import { RiDashboardFill } from "react-icons/ri";
 import { FaShoppingCart } from "react-icons/fa";
 import useBookedCart from "../../../Hooks/useBookedCart";
 import icon from "../../../../public/Gold Modern Music Logo.gif";
+import useAdmin from "../../../Hooks/useAdmin";
+import useInstructor from "../../../Hooks/useInstructor";
 const Navbar = () => {
   const { user, LogOut } = useContext(AuthContext);
 
   const [bookedCart] = useBookedCart();
+
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
 
   const themes = ["light", "dark", "cupcake", "night"];
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -59,14 +64,16 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li>
-        <NavLink to="/dashboard/booked-courses">
-          <button className="flex gap-2  items-center">
-            <FaShoppingCart />{" "}
-            <div className="badge badge-error">{bookedCart?.length || 0}</div>
-          </button>
-        </NavLink>
-      </li>
+      {isAdmin || isInstructor || (
+        <li>
+          <NavLink to="/dashboard/booked-courses">
+            <button className="flex gap-2  items-center">
+              <FaShoppingCart />{" "}
+              <div className="badge badge-error">{bookedCart?.length || 0}</div>
+            </button>
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -99,9 +106,7 @@ const Navbar = () => {
         </div>
         <a className="normal-case md:text-xl flex justify-center items-center gap-10">
           <img src={icon} className="w-16 rounded-full" alt="" />
-          <h2 className="bg-white px-2 rounded-full py-1">
-            Melody Grove
-          </h2>
+          <h2 className="bg-white px-2 rounded-full py-1">Melody Grove</h2>
         </a>
       </div>
       <div className="navbar justify-center hidden lg:flex text-base-content">

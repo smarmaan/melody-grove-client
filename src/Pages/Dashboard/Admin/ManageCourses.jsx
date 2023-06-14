@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAvailableCourses from "../../../Hooks/useAvailableCourses";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const ManageCourses = () => {
   const [availableCourses, , refetch] = useAvailableCourses();
@@ -93,14 +94,23 @@ const ManageCourses = () => {
   };
 
   return (
-    <>
-      <table className="table text-center">
+    <div className="flex-col">
+      <Helmet>
+        <title>Melody Grove | Manage Courses</title>
+      </Helmet>
+
+      <div className="text-center text-3xl font-bold my-5">Manage Courses</div>
+
+      <table className="table text-center my-5">
         {/* head */}
         <thead>
-          <tr>
+          <tr className="uppercase">
             <th>NO.</th>
             <th>COURSES IMAGE</th>
             <th>COURSES NAME</th>
+            <th>Instructor NAME</th>
+            <th>Instructor Email</th>
+            <th>Available seats</th>
             <th>PRICE</th>
             <th>STATUS</th>
             <th>UPDATE</th>
@@ -125,6 +135,15 @@ const ManageCourses = () => {
               </td>
               <td>
                 <div className="font-bold">{course.courseName}</div>
+              </td>
+              <td>
+                <div className="font-bold">{course.instructorName}</div>
+              </td>
+              <td>
+                <div className="font-bold">{course.instructorEmail}</div>
+              </td>
+              <td>
+                <div className="font-bold">{course.seats}</div>
               </td>
               <td>{course.price}</td>
               <td>
@@ -157,7 +176,7 @@ const ManageCourses = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

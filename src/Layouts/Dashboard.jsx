@@ -43,12 +43,12 @@ const Dashboard = () => {
 
           {(isAdmin && (
             <>
-              <li>
+              {/* <li>
                 <NavLink to="/dashboard/admin-home">
                   <FaHome />
                   Admin Home
                 </NavLink>
-              </li>
+              </li> */}
 
               <li>
                 <NavLink to="/dashboard/manage-courses">
@@ -65,11 +65,11 @@ const Dashboard = () => {
           )) ||
             (isInstructor && (
               <>
-                <li>
+                {/* <li>
                   <NavLink to="/dashboard/instructor-home">
                     <FaHome /> Instructor Home
                   </NavLink>
-                </li>
+                </li> */}
 
                 <li>
                   <NavLink to="/dashboard/add-courses">

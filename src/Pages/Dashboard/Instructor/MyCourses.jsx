@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useMyCourses from "../../../Hooks/useMyCourses";
 import { VscFeedback } from "react-icons/vsc";
+import { Helmet } from "react-helmet-async";
 
 const MyCourses = () => {
   const [myCourses] = useMyCourses();
@@ -16,7 +17,11 @@ const MyCourses = () => {
 
   return (
     <div className="w-full font-Cambria">
-      <h1 className="card-title flex justify-center my-10">
+      <Helmet>
+        <title>Melody Grove | MY COURSES </title>
+      </Helmet>
+
+      <h1 className="card-title text-4xl flex justify-center my-10">
         Total courses : {myCourses.length}{" "}
       </h1>
 

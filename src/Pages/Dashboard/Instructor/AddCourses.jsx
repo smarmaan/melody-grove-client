@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const img_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
 
@@ -59,6 +60,10 @@ const AddCourses = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Melody Grove | ADD COURSE </title>
+      </Helmet>
+
       <div className="hero max-h-screen items-center text-base-content">
         <div className="card w-full max-w-lg shadow-2xl bg-base-100 my-8">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">

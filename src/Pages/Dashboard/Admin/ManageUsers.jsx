@@ -73,7 +73,7 @@ const ManageUsers = () => {
   return (
     <div className="text-center">
       <Helmet>
-        <title>Melody Grove | All Users </title>
+        <title>Melody Grove | Manage Users </title>
       </Helmet>
 
       <h1 className="text-3xl font-semibold my-5">
