@@ -56,13 +56,15 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li className="my-1">
-        <NavLink to="/dashboard/welcome">
-          <button className="flex items-center gap-1">
-            <RiDashboardFill className="text-2xl" /> Dashboard
-          </button>
-        </NavLink>
-      </li>
+      {user && (
+        <li className="my-1">
+          <NavLink to="/dashboard/welcome">
+            <button className="flex items-center gap-1">
+              <RiDashboardFill className="text-2xl" /> Dashboard
+            </button>
+          </NavLink>
+        </li>
+      )}
 
       {isAdmin || isInstructor || (
         <li>
@@ -78,7 +80,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar fixed z-10 bg-opacity-50 bg-black font-Cambria font-extrabold">
+    <div className="navbar fixed z-10 bg-opacity-50 bg-orange-800 font-Cambria font-extrabold">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

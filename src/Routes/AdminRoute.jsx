@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import useAdmin from "../Hooks/useAdmin";
 import { Navigate, useLocation } from "react-router-dom";
+import loader from "../../public/loader.gif";
 
 const AdminRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
@@ -14,7 +15,7 @@ const AdminRoute = ({ children }) => {
     return (
       <>
         <div className="h-screen flex justify-center items-center">
-          <img src="../../public/loader.gif" alt="" />
+          <img src={loader} alt="" />
         </div>
       </>
     );

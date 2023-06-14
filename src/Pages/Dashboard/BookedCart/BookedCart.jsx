@@ -47,9 +47,9 @@ const BookedCart = () => {
         <title>Melody Grove | Booked Courses</title>
       </Helmet>
 
-      <div>
-        <h2>Number of Booked Courses : {bookedCart.length}</h2>
-        <h2>Total Amount : {totalFixed}</h2>
+      <div className="text-5xl font-Cambria mt-14 text-center space-y-5 mb-6">
+        <h2 className="">Number of Booked Courses : {bookedCart.length}</h2>
+        <h2 className="">Total Amount : {totalFixed}</h2>
       </div>
 
       <>

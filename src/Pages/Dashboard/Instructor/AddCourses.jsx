@@ -108,6 +108,7 @@ const AddCourses = () => {
               </label>
               <input
                 type="text"
+                readOnly
                 placeholder="Enter Your Name"
                 defaultValue={user.displayName}
                 {...register("instructorName", { required: true })}
@@ -125,6 +126,7 @@ const AddCourses = () => {
               </label>
               <input
                 type="email"
+                readOnly
                 placeholder="Enter Your email"
                 defaultValue={user.email}
                 {...register("instructorEmail", { required: true })}

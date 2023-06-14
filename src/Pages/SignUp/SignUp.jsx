@@ -130,7 +130,7 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.name && (
-                  <span className="text-red-600">Name is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">Name is required</span>
                 )}
               </div>
 
@@ -153,7 +153,7 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.photoURL && (
-                  <span className="text-red-600">Photo URL is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">Photo URL is required</span>
                 )}
               </div>
 
@@ -177,7 +177,7 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.email && (
-                  <span className="text-red-600">Email is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">Email is required</span>
                 )}
               </div>
 
@@ -210,23 +210,23 @@ const SignUp = () => {
                   />
 
                   {errors.password?.type === "required" && (
-                    <span className="text-red-600">Password is required</span>
+                    <span className="text-cyan-300 font-bold text-lg">Password is required</span>
                   )}
 
                   {errors.password?.type === "minLength" && (
-                    <span className="text-red-600">
+                    <span className="text-cyan-300 font-bold text-lg">
                       Password must be 6 characters long
                     </span>
                   )}
 
                   {errors.password?.type === "maxLength" && (
-                    <span className="text-red-600">
+                    <span className="text-cyan-300 font-bold text-lg">
                       Password must be less than 20 characters long
                     </span>
                   )}
 
                   {errors.password?.type === "pattern" && (
-                    <span className="text-red-600">
+                    <span className="text-cyan-300 font-bold text-lg">
                       Password must have one of uppercase, lowercase , number
                       special character.
                     </span>
@@ -247,7 +247,7 @@ const SignUp = () => {
                     className="input input-bordered"
                   />
                   {errors.confirm?.type === "required" && (
-                    <span className="text-red-600">Password Must Match</span>
+                    <span className="text-cyan-300 font-bold text-lg">Password Must Match</span>
                   )}
                 </div>
               </div>
@@ -295,7 +295,7 @@ const SignUp = () => {
                   </select>
 
                   {errors.gender?.type === "required" && (
-                    <span className="text-red-600">
+                    <span className="text-cyan-300 font-bold text-lg">
                       {" "}
                       Must Select your Gender
                     </span>
@@ -320,7 +320,7 @@ const SignUp = () => {
                     className="input input-bordered"
                   />
                   {errors.number && (
-                    <span className="text-red-600">Number is required</span>
+                    <span className="text-cyan-300 font-bold text-lg">Number is required</span>
                   )}
                 </div>
               </div>
@@ -345,7 +345,7 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.address && (
-                  <span className="text-red-600">Address is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">Address is required</span>
                 )}
               </div>
 

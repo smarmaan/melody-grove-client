@@ -7,6 +7,7 @@ import {
   FaMoneyCheck,
 } from "react-icons/fa";
 import { MdOutlineClass, MdClass } from "react-icons/md";
+import { AiFillFileAdd,AiFillCheckSquare } from "react-icons/ai";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import useBookedCart from "../Hooks/useBookedCart";
 import useAdmin from "../Hooks/useAdmin";
@@ -73,23 +74,23 @@ const Dashboard = () => {
 
                 <li>
                   <NavLink to="/dashboard/add-courses">
-                    <FaHome /> Add Courses
+                    <AiFillFileAdd /> Add Courses
                   </NavLink>
                 </li>
 
                 <li>
                   <NavLink to="/dashboard/my-courses">
-                    <FaHome /> My Courses
+                    <AiFillCheckSquare /> My Courses
                   </NavLink>
                 </li>
               </>
             )) || (
               <>
-                <li>
+                {/* <li>
                   <NavLink to="/dashboard/user-home">
                     <FaHome /> User Home
                   </NavLink>
-                </li>
+                </li> */}
 
                 <li>
                   <NavLink to="/dashboard/booked-courses">
