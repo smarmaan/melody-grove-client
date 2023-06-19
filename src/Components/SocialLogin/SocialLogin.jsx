@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
-import google from "../../../public/google-logo-effect.gif"
+import google from "../../../public/google-logo-effect.gif";
 
 const SocialLogin = () => {
   const { GoogleSignIn } = useContext(AuthContext);
@@ -26,7 +26,7 @@ const SocialLogin = () => {
         role: "student",
       };
 
-      fetch("https://melody-grove-server.vercel.app/users", {
+      fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -49,11 +49,7 @@ const SocialLogin = () => {
           onClick={handleGoogleSignIn}
           className="btn btn-circle border-0"
         >
-          <img
-            src={google}
-            className="rounded-full"
-            alt=""
-          />
+          <img src={google} className="rounded-full" alt="" />
         </button>
       </div>
     </>

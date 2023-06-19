@@ -8,7 +8,6 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import signUp from "../../../public/piano-signup.gif";
 
-
 const SignUp = () => {
   const { createUser, updateUserProfile, LogOut } = useContext(AuthContext);
   const [passwordType, setPasswordType] = useState("password");
@@ -41,7 +40,7 @@ const SignUp = () => {
             role: "student",
           };
 
-          fetch("https://melody-grove-server.vercel.app/users", {
+          fetch("http://localhost:5000/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -130,7 +129,9 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.name && (
-                  <span className="text-cyan-300 font-bold text-lg">Name is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">
+                    Name is required
+                  </span>
                 )}
               </div>
 
@@ -153,7 +154,9 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.photoURL && (
-                  <span className="text-cyan-300 font-bold text-lg">Photo URL is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">
+                    Photo URL is required
+                  </span>
                 )}
               </div>
 
@@ -177,7 +180,9 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.email && (
-                  <span className="text-cyan-300 font-bold text-lg">Email is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">
+                    Email is required
+                  </span>
                 )}
               </div>
 
@@ -210,7 +215,9 @@ const SignUp = () => {
                   />
 
                   {errors.password?.type === "required" && (
-                    <span className="text-cyan-300 font-bold text-lg">Password is required</span>
+                    <span className="text-cyan-300 font-bold text-lg">
+                      Password is required
+                    </span>
                   )}
 
                   {errors.password?.type === "minLength" && (
@@ -247,7 +254,9 @@ const SignUp = () => {
                     className="input input-bordered"
                   />
                   {errors.confirm?.type === "required" && (
-                    <span className="text-cyan-300 font-bold text-lg">Password Must Match</span>
+                    <span className="text-cyan-300 font-bold text-lg">
+                      Password Must Match
+                    </span>
                   )}
                 </div>
               </div>
@@ -320,7 +329,9 @@ const SignUp = () => {
                     className="input input-bordered"
                   />
                   {errors.number && (
-                    <span className="text-cyan-300 font-bold text-lg">Number is required</span>
+                    <span className="text-cyan-300 font-bold text-lg">
+                      Number is required
+                    </span>
                   )}
                 </div>
               </div>
@@ -345,7 +356,9 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
                 {errors.address && (
-                  <span className="text-cyan-300 font-bold text-lg">Address is required</span>
+                  <span className="text-cyan-300 font-bold text-lg">
+                    Address is required
+                  </span>
                 )}
               </div>
 

@@ -5,6 +5,7 @@ import InstrumentsCategory from "../InstrumentsCategory/InstrumentsCategory";
 import PopularClasses from "../PopularClasses/PopularClasses";
 import PopularInstructors from "../PopularInstructors/PopularInstructors";
 import CommentSection from "../CommentSection/CommentSection";
+import Feedback from "../Feedback/Feedback";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <PopularClasses></PopularClasses>
       <PopularInstructors></PopularInstructors>
       <CommentSection></CommentSection>
+      <Feedback></Feedback>
     </div>
   );
 };

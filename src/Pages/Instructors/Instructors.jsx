@@ -6,7 +6,7 @@ const Instructors = () => {
   const [allInstructors, setAllInstructors] = useState([]);
 
   useEffect(() => {
-    let url = "https://melody-grove-server.vercel.app/all-instructors";
+    let url = "http://localhost:5000/all-instructors";
 
     fetch(url)
       .then((res) => res.json())

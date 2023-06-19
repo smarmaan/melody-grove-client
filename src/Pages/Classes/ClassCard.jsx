@@ -39,7 +39,7 @@ const ClassCard = ({ course }) => {
         price,
         email: user.email,
       };
-      fetch("https://melody-grove-server.vercel.app/booked-courses", {
+      fetch("http://localhost:5000/booked-courses", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(bookedCourse),

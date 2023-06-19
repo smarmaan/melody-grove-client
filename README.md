@@ -44,7 +44,8 @@ Our website is built using the following technologies and packages:
 
 ## GitHub Repositories
 
-- Server-side code: [GitHub Repository - Melody Grove (Server)]([https://github.com/smarmaan/melody-grove-server.git])
+- Client-side code: [GitHub Repository - Melody Grove (Client)](https://github.com/your-username/melody-grove-client)
+- Server-side code: [GitHub Repository - Melody Grove (Server)](https://github.com/your-username/melody-grove-server)
 
 ## Admin Email & Password
 

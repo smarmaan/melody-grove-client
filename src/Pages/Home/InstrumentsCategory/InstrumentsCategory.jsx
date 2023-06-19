@@ -11,7 +11,7 @@ const InstrumentsCategory = () => {
   const [instrumentsCategory, setInstrumentsCategory] = useState([]);
 
   useEffect(() => {
-    fetch("https://melody-grove-server.vercel.app/all-courses")
+    fetch("http://localhost:5000/all-courses")
       .then((res) => res.json())
       .then((data) => setInstrumentsCategory(data));
   }, []);
